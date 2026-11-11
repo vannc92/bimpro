@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% block main %}
+<h1>Hồ sơ đầu vào</h1>
+<p>Thư mục đang khai báo{% if not p.sources.folders %}: <em>chưa có</em>{% endif %}:</p>
+<ul>{% for f in p.sources.folders %}<li><code>{{ f }}</code></li>{% endfor %}</ul>
+<p><a href="/p/{{ p.id }}/g/sources">Sửa danh sách thư mục</a> (dán đường dẫn thư mục OneDrive đã đồng bộ, ví dụ <code>C:\Users\...\input</code>).</p>
+<form method="post" action="/p/{{ p.id }}/sources/scan"><button>Quét và lập chỉ mục</button></form>
+{% if stats %}<p class="ok">{{ stats }}</p>{% endif %}
+{% set labels = {'model': 'Mô hình', 'drawing': 'Bản vẽ', 'text': 'Văn bản (đọc được chữ)', 'other': 'Khác'} %}
+{% for k in ['text', 'model', 'drawing', 'other'] %}{% if inv.get(k) %}
+<h2>{{ labels[k] }} ({{ inv[k]|length }})</h2>
+<table class="list"><thead><tr><th>Tệp</th><th>Trang</th><th>Ghi chú</th></tr></thead><tbody>
+{% for f in inv[k] %}<tr><td><a href="#" class="open" data-path="{{ f.path }}">{{ f.path }}</a></td><td>{{ f.pages or '' }}</td><td>{% if f.status %}<span class="pill warn">{{ f.status }}</span>{% endif %}</td></tr>{% endfor %}
+</tbody></table>{% endif %}{% endfor %}
+<h2>Tra cứu</h2>
+<div class="srch wide"><form id="sform" data-pid="{{ p.id }}"><input id="q" placeholder="Từ khóa"><button>Tìm</button></form><div id="hits"></div></div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}{% block main %}
+<h1>Dự án</h1>
+<table class="list"><thead><tr><th>Mã</th><th>Tên</th><th>Giai đoạn</th><th></th></tr></thead><tbody>
+{% for x in projects %}<tr><td><code>{{ x.id }}</code></td><td><a href="/p/{{ x.id }}">{{ x.title or x.general.name or x.id }}</a>{% if x.is_template %} <span class="tag">mẫu</span>{% endif %}</td><td>{{ stages[x.stage].name if x.stage in stages else x.stage }}</td><td></td></tr>
+{% else %}<tr><td colspan="4">Chưa có dự án.</td></tr>{% endfor %}
+</tbody></table>
+<h2>Tạo dự án mới</h2>
+<form method="post" action="/new" class="card row">
+  <label>Tạo từ <select name="src">{% for x in projects %}<option value="{{ x.id }}">{{ x.title or x.id }}{% if x.is_template %} (mẫu){% endif %}</option>{% endfor %}</select></label>
+  <label>Mã thư mục <input name="new_id" required pattern="[A-Za-z0-9_\-]+" placeholder="vd: dh3mr_bvtc"></label>
+  <label>Tên hiển thị <input name="title" placeholder="vd: BEP DH3MR – BVTC"></label>
+  <button>Tạo</button>
+</form>
+<p class="muted">Dự án mới là bản sao toàn bộ dữ liệu của dự án/mẫu nguồn; sau đó sửa từng nhóm dữ liệu ở thanh bên.</p>
+{% endblock %}

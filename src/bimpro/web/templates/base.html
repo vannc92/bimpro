@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}bimpro{% endblock %} · Biên soạn BEP</title>
+<link rel="stylesheet" href="/static/app.css"></head>
+<body>
+<header class="top"><a href="/" class="brand">bimpro</a><span class="sub">Biên soạn Kế hoạch thực hiện BIM</span>
+{% if p %}<span class="crumb">/ <a href="/p/{{ p.id }}">{{ p.title or p.id }}</a> <span class="tag">{{ p.stage }}</span></span>{% endif %}</header>
+<div class="wrap">
+{% if p %}
+<nav class="side">
+  <a href="/p/{{ p.id }}" class="{{ 'on' if request.url.path == '/p/' ~ p.id }}">Tổng quan</a>
+  <div class="h">Dữ liệu dự án</div>
+  {% for k, v in GROUPS.items() %}<a href="/p/{{ p.id }}/g/{{ k }}" class="{{ 'on' if request.url.path.endswith('/g/' ~ k) }}">{{ v[0] }}</a>{% endfor %}
+  <div class="h">Tài liệu</div>
+  <a href="/p/{{ p.id }}/doc/bep" class="{{ 'on' if '/doc/' in request.url.path }}">Xem trước, sửa mục</a>
+  <a href="/p/{{ p.id }}/check" class="{{ 'on' if request.url.path.endswith('/check') }}">Kiểm tra nhất quán</a>
+  <a href="/p/{{ p.id }}/files" class="{{ 'on' if request.url.path.endswith('/files') }}">Xuất Word</a>
+  <div class="h">Hồ sơ đầu vào</div>
+  <a href="/p/{{ p.id }}/sources" class="{{ 'on' if request.url.path.endswith('/sources') }}">Thư mục, tra cứu</a>
+</nav>
+{% endif %}
+<main>{% block main %}{% endblock %}</main>
+</div>
+<script src="/static/app.js"></script>
+{% block js %}{% endblock %}
+</body></html>

@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block main %}
+<h1>Kiểm tra nhất quán</h1>
+<table class="list"><thead><tr><th>Mức</th><th>Vị trí</th><th>Nội dung</th></tr></thead><tbody>
+{% for i in issues %}<tr class="{{ i.level }}"><td><span class="pill {{ {'error':'err','warn':'warn','info':'info'}[i.level] }}">{{ {'error':'Lỗi','warn':'Cảnh báo','info':'Chưa điền'}[i.level] }}</span></td><td>{{ i.where }}</td><td>{{ i.message }}</td></tr>
+{% else %}<tr><td colspan="3">Không phát hiện vấn đề.</td></tr>{% endfor %}
+</tbody></table>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}{% from "_field.html" import cell %}
+{% block title %}{{ label }}{% endblock %}
+{% block main %}
+<div class="split">
+<div class="formcol">
+<h1>{{ label }}</h1>
+{% if saved %}<p class="ok">Đã lưu.</p>{% endif %}
+<form method="post" id="gform">
+{% for f in fields %}
+<div class="field" data-path="{{ f.name }}">
+  <label class="lbl">{{ f.title }}{% if cites.get(group ~ '.' ~ f.name) %} <span class="cite" title="Nguồn">⟵ {{ cites[group ~ '.' ~ f.name] }}</span>{% endif %}</label>
+  {% set v = data[f.name] %}
+  {% if f.kind == 'text' %}
+    {% if f.long %}<textarea name="f.{{ f.name }}" rows="4">{{ v }}</textarea>{% else %}<input name="f.{{ f.name }}" value="{{ v }}">{% endif %}
+    <input type="hidden" name="cite.{{ f.name }}" value="">
+  {% elif f.kind == 'bool' %}<input type="checkbox" name="f.{{ f.name }}" value="1" {{ 'checked' if v }}>
+  {% elif f.kind == 'lines' %}<textarea name="l.{{ f.name }}" rows="{{ [v|length + 2, 4]|max }}">{{ v|join('\n') }}</textarea>
+    <input type="hidden" name="cite.{{ f.name }}" value="">
+  {% elif f.kind == 'nested' %}
+    <div class="checks">{% for c in f.cols %}<label><input type="checkbox" name="n.{{ f.name }}.{{ c.name }}" value="1" {{ 'checked' if v[c.name] }}> {{ c.title }}</label>{% endfor %}</div>
+  {% elif f.kind == 'grid' %}
+    <div class="gridwrap"><table class="grid" data-name="{{ f.name }}">
+      <thead><tr><th class="n">#</th>{% for c in f.cols %}<th>{{ c.title }}</th>{% endfor %}<th class="n"></th></tr></thead>
+      <tbody>
+      {% for row in v %}<tr><td class="n handle">{{ loop.index }}</td>{% for c in f.cols %}<td>{{ cell(f.name, c, row[c.name], 'g.' ~ f.name ~ '.' ~ loop.index0) }}</td>{% endfor %}<td class="n"><button type="button" class="x" title="Xóa dòng">×</button><button type="button" class="up" title="Lên">↑</button></td></tr>{% endfor %}
+      </tbody>
+      <tfoot><tr class="tplrow" hidden><td class="n handle">+</td>{% for c in f.cols %}<td>{{ cell(f.name, c, '', 'g.' ~ f.name ~ '.__i__') }}</td>{% endfor %}<td class="n"><button type="button" class="x">×</button><button type="button" class="up">↑</button></td></tr></tfoot>
+    </table></div>
+    <button type="button" class="add" data-for="{{ f.name }}">+ Thêm dòng</button>
+  {% endif %}
+</div>
+{% endfor %}
+<div class="savebar"><button>Lưu</button> <span class="muted">Ô trống sẽ in «…» trong tài liệu và được liệt kê ở trang kiểm tra.</span></div>
+</form>
+{% if group in ('org', 'coordination') %}
+<h2>Tải ảnh</h2>
+<form method="post" action="/p/{{ p.id }}/image" enctype="multipart/form-data" class="card row">
+  <input type="hidden" name="field" value="{{ 'org.chart_image' if group == 'org' else 'coordination.process_image' }}">
+  <label>{{ 'Sơ đồ tổ chức' if group == 'org' else 'Lưu đồ quy trình phối hợp' }} (PNG/JPG) <input type="file" name="file" accept=".png,.jpg,.jpeg" required></label>
+  <button>Tải lên</button>
+</form>
+{% endif %}
+</div>
+<aside class="srch">
+  <h2>Tra cứu hồ sơ đầu vào</h2>
+  <form id="sform" data-pid="{{ p.id }}"><input id="q" placeholder="Từ khóa, vd: LOD"><button>Tìm</button></form>
+  <div class="kw">{% for k in keywords %}<button type="button" class="kwb">{{ k }}</button>{% endfor %}</div>
+  <p class="muted small">Bấm vào ô cần điền trước, rồi bấm “Chép vào ô” ở kết quả. Nguồn (tệp, trang) được lưu kèm trường. Chưa có kết quả? Khai báo thư mục và quét ở <a href="/p/{{ p.id }}/sources">Hồ sơ đầu vào</a>.</p>
+  <div id="hits"></div>
+</aside>
+</div>
+{% endblock %}

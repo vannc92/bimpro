@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% block title %}{{ d.info.label or 'BEP' }}{% endblock %}
+{% block main %}
+<div class="tabs">{% for x in docs %}<a href="/p/{{ p.id }}/doc/{{ x.doc }}" class="{{ 'on' if x.doc == doc }}">{{ x.label or 'BEP' }}</a>{% endfor %}
+<form method="post" action="/p/{{ p.id }}/export" class="inline"><input type="hidden" name="doc" value="{{ doc }}"><button>Xuất tài liệu này</button></form></div>
+<div class="docsplit">
+<nav class="toc">
+{% for s in d.sections %}<div class="l{{ s.level }} {{ '' if s.enabled else 'off' }}">
+  <a href="#s-{{ s.sid }}">{{ s.number ~ '. ' if s.number }}{{ s.title }}</a>
+  {% if s.overridden %}<span class="tag">đã sửa</span>{% endif %}{% if not s.enabled %}<span class="tag">tắt</span>{% endif %}
+  <a class="ed" href="/p/{{ p.id }}/doc/{{ doc }}/sec/{{ s.sid }}" title="Sửa mục">✎</a></div>{% endfor %}
+</nav>
+<article class="paper">
+{% if d.issues %}<div class="warnbox">{% for i in d.issues %}<div>{{ i.where }}: {{ i.message }}</div>{% endfor %}</div>{% endif %}
+{{ html|safe }}
+</article>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}{% block main %}
+<h1>{{ p.title or p.id }}</h1>
+<form method="post" action="/p/{{ p.id }}/meta" class="card row">
+  <label>Tên hiển thị <input name="title" value="{{ p.title }}"></label>
+  <label>Giai đoạn <select name="stage">{% for k, s in stages.items() %}<option value="{{ k }}" {{ 'selected' if k == p.stage }}>{{ s.name }}</option>{% endfor %}</select></label>
+  <button>Lưu</button>
+</form>
+<h2>Tài liệu phát hành</h2>
+<table class="list"><thead><tr><th>Số</th><th>Tài liệu</th><th>Mã hiệu</th><th></th></tr></thead><tbody>
+{% for d in docs %}<tr><td>{{ d.label or 'BEP' }}</td><td>{{ d.title }}</td><td><code>{{ d.code }}</code></td>
+<td><a href="/p/{{ p.id }}/doc/{{ d.doc }}">Xem trước</a></td></tr>{% endfor %}
+</tbody></table>
+<p class="muted">Thứ tự, bật/tắt phụ lục và mã hiệu sửa ở <a href="/p/{{ p.id }}/g/doc">Kiểm soát tài liệu</a>. Số phụ lục (PL-01, PL-02…) tự đánh theo thứ tự. Mẫu có sẵn: {{ all_docs|join(', ') }}.</p>
+<form method="post" action="/p/{{ p.id }}/export"><button>Xuất toàn bộ ra Word</button></form>
+<h2>Kiểm tra nhanh</h2>
+{% set e = issues|selectattr('level','equalto','error')|list %}{% set w = issues|selectattr('level','equalto','warn')|list %}{% set i = issues|selectattr('level','equalto','info')|list %}
+<p><span class="pill err">{{ e|length }} lỗi</span> <span class="pill warn">{{ w|length }} cảnh báo</span> <span class="pill info">{{ i|length }} mục còn chỗ trống</span> · <a href="/p/{{ p.id }}/check">Xem chi tiết</a></p>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% block main %}
+<h1>Sửa mục: {{ sec.title }}</h1>
+<p class="muted">Tài liệu <code>{{ doc }}</code>, mã mục <code>{{ sec.sid }}</code>. Nội dung là Markdown rút gọn có biến: <code>{{ '{{ p.general.name }}' }}</code>, <code>{{ "{{ A }}" }}</code> (Tư vấn/Nhà thầu), <code>{{ "{{ stage.short }}" }}</code>; dòng bắt đầu bằng <code>- </code> là gạch đầu dòng, <code>  + </code> là ý con; <code>[Bảng#ma] Tên bảng</code> rồi bảng dạng <code>| a | b |</code>; <code>@sec[ma-muc]</code> chèn “mục x.y”.</p>
+<form method="post" class="card">
+  <label class="chk"><input type="checkbox" name="enabled" value="1" {{ 'checked' if not ov or ov.enabled }}> Đưa mục này vào tài liệu</label>
+  <textarea name="body" rows="24" class="code">{{ ov.body if ov and ov.body is not none else sec.source }}</textarea>
+  <div class="savebar"><button name="action" value="save">Lưu</button>
+  <button name="action" value="reset" class="ghost">Khôi phục nội dung mẫu</button>
+  <a href="/p/{{ p.id }}/doc/{{ doc }}#s-{{ sec.sid }}">Quay lại</a></div>
+</form>
+{% if ov and ov.body is not none %}<details><summary>Nội dung mẫu gốc</summary><pre>{{ sec.source }}</pre></details>{% endif %}
+{% endblock %}

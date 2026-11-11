@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block main %}
+<h1>Xuất Word</h1>
+<form method="post" action="/p/{{ p.id }}/export"><button>Xuất lại toàn bộ</button></form>
+<table class="list"><thead><tr><th>Tệp</th><th>Kích thước</th></tr></thead><tbody>
+{% for f in items %}<tr><td><a href="/p/{{ p.id }}/files/{{ f.name }}">{{ f.name }}</a></td><td>{{ (f.stat().st_size / 1024)|round|int }} KB</td></tr>
+{% else %}<tr><td colspan="2">Chưa xuất tệp nào.</td></tr>{% endfor %}
+</tbody></table>
+<p class="muted">Tệp nằm trong thư mục <code>projects/{{ p.id }}/output</code>. Khi mở bằng Word, chọn “Yes” để cập nhật mục lục và số trang.</p>
+{% endblock %}

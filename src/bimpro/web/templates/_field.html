@@ -1,0 +1,5 @@
+{% macro cell(name, col, value, prefix) -%}
+{% if col.kind == 'bool' %}<input type="checkbox" name="{{ prefix }}.{{ col.name }}" value="1" {{ 'checked' if value }}>
+{%- elif col.long %}<textarea name="{{ prefix }}.{{ col.name }}" rows="2">{{ value or '' }}</textarea>
+{%- else %}<input name="{{ prefix }}.{{ col.name }}" value="{{ value or '' }}">{% endif %}
+{%- endmacro %}
