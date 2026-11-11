@@ -1,0 +1,19 @@
+# Giai đoạn dự án. "phrase" dùng sau cụm "giai đoạn ..."; "next" là giai đoạn kế tiếp.
+TKCS:
+  name: Thiết kế cơ sở
+  phrase: lập Báo cáo nghiên cứu khả thi – Thiết kế cơ sở
+  short: thiết kế cơ sở
+  next: thiết kế kỹ thuật
+  design_docs: hồ sơ, bản vẽ thiết kế cơ sở
+TKKT:
+  name: Thiết kế kỹ thuật
+  phrase: thiết kế kỹ thuật
+  short: thiết kế kỹ thuật
+  next: thiết kế bản vẽ thi công
+  design_docs: hồ sơ, bản vẽ thiết kế kỹ thuật
+BVTC:
+  name: Thiết kế bản vẽ thi công
+  phrase: thiết kế bản vẽ thi công
+  short: thiết kế bản vẽ thi công
+  next: thi công và hoàn công
+  design_docs: hồ sơ, bản vẽ thiết kế bản vẽ thi công

@@ -1,0 +1,293 @@
+title: BEP mẫu – Thiết kế cơ sở
+stage: TKCS
+is_template: true
+general:
+  name: ''
+  code: XXX
+  owner_short: ''
+  author_short: PECC2
+  author_name: Công ty Cổ phần Tư vấn Xây dựng Điện 2
+  author_role: Tư vấn
+  report_title: BÁO CÁO NGHIÊN CỨU KHẢ THI
+  info:
+  - {label: 'Chủ đầu tư', value: ''}
+  - {label: 'Tư vấn thiết kế', value: 'Công ty Cổ phần Tư vấn Xây dựng Điện 2 (PECC2)'}
+  - {label: 'Tên dự án', value: ''}
+  - {label: 'Địa điểm dự án', value: ''}
+  - {label: 'Quy mô công suất và công nghệ', value: ''}
+  - {label: 'Phân cấp công trình', value: ''}
+  - {label: 'Giai đoạn áp dụng BIM', value: 'Giai đoạn lập Báo cáo nghiên cứu khả thi – Thiết kế cơ sở.'}
+  parties:
+  - {code: 'CĐT', role: 'Chủ đầu tư / Ban Quản lý dự án', name: '', short: ''}
+  - {code: 'TV', role: 'Tư vấn thiết kế', name: 'Công ty Cổ phần Tư vấn Xây dựng Điện 2', short: 'PECC2'}
+  - {code: 'TVTT', role: 'Tư vấn thẩm tra', name: '', short: ''}
+basis:
+  legal:
+  - Luật Xây dựng số 135/2025/QH15 ngày 25/6/2025 của Quốc hội
+  - Luật Điện lực số 61/2024/QH15 ngày 30/11/2024 của Quốc hội
+  - Luật An ninh mạng số 116/2025/QH15
+  - Nghị định số 217/2026/NĐ-CP ngày 19/6/2026 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Xây dựng về quản lý hoạt động xây dựng, trong đó Điều 8 quy định về ứng dụng mô hình thông tin công trình (BIM) và Điều 17 quy định nội dung nhiệm vụ thiết kế xây dựng
+  - Quyết định số 258/QĐ-TTg ngày 17/3/2023 của Thủ tướng Chính phủ phê duyệt Lộ trình áp dụng Mô hình thông tin công trình (BIM) trong hoạt động xây dựng
+  - Quyết định số 348/QĐ-BXD ngày 02/4/2021 của Bộ Xây dựng công bố Hướng dẫn chung áp dụng Mô hình thông tin công trình (BIM)
+  - Quyết định số 347/QĐ-BXD ngày 02/4/2021 của Bộ Xây dựng công bố Hướng dẫn chi tiết áp dụng Mô hình thông tin công trình (BIM) đối với công trình dân dụng và công trình hạ tầng kỹ thuật đô thị
+  - Tiêu chuẩn quốc gia TCVN 14177-1:2024 và TCVN 14177-2:2024 về tổ chức và số hóa thông tin công trình xây dựng, quản lý thông tin sử dụng mô hình thông tin công trình
+  contracts:
+  - Hợp đồng số «…» ngày «…» về dịch vụ tư vấn lập Báo cáo nghiên cứu khả thi dự án «…»
+  note: Dự án «…» là công trình «cấp …», xây dựng mới, do đó thuộc diện bắt buộc áp dụng BIM kể từ giai đoạn lập Báo cáo nghiên cứu khả thi theo điểm a khoản 1 Điều 8 Nghị định số 217/2026/NĐ-CP. Dữ liệu BIM ở định dạng mở IFC được nộp kèm hồ sơ trình thẩm định theo khoản 3 Điều 8 của Nghị định này.
+  standards:
+  - {name: 'Nghị định số 217/2026/NĐ-CP', date: '19/6/2026', description: 'Quy định chi tiết một số điều và biện pháp thi hành Luật Xây dựng về quản lý hoạt động xây dựng; Điều 8 quy định về ứng dụng BIM', requirement: 'Áp dụng'}
+  - {name: 'Quyết định số 258/QĐ-TTg', date: '17/3/2023', description: 'Phê duyệt Lộ trình áp dụng Mô hình thông tin công trình (BIM) trong hoạt động xây dựng', requirement: 'Áp dụng'}
+  - {name: 'Quyết định số 348/QĐ-BXD', date: '02/4/2021', description: 'Công bố Hướng dẫn chung áp dụng Mô hình thông tin công trình (BIM)', requirement: 'Áp dụng'}
+  - {name: 'Quyết định số 347/QĐ-BXD', date: '02/4/2021', description: 'Công bố Hướng dẫn chi tiết áp dụng BIM cho công trình dân dụng và hạ tầng kỹ thuật đô thị', requirement: 'Tham khảo'}
+  - {name: 'ISO 16739-1 (IFC4)', date: '2018', description: 'Định dạng dữ liệu mở IFC phục vụ trao đổi thông tin và nộp dữ liệu BIM cho cơ quan chuyên môn về xây dựng theo khoản 3 Điều 8 Nghị định số 217/2026/NĐ-CP', requirement: 'Áp dụng'}
+  - {name: 'TCVN 14177-1:2024', date: '13/12/2024', description: 'Quản lý thông tin bằng Mô hình thông tin công trình: Khái niệm và nguyên tắc', requirement: 'Tham khảo'}
+  - {name: 'TCVN 14177-2:2024', date: '13/12/2024', description: 'Quản lý thông tin bằng Mô hình thông tin công trình: Giai đoạn chuyển giao tài sản', requirement: 'Tham khảo'}
+schedule:
+  milestones:
+  - {task: 'Khảo sát, lập và trình Báo cáo nghiên cứu khả thi', time: ''}
+  - {task: 'Thẩm định Báo cáo nghiên cứu khả thi', time: ''}
+  - {task: 'Quyết định đầu tư xây dựng', time: ''}
+  - {task: 'Lựa chọn nhà thầu', time: ''}
+  - {task: 'Thực hiện hợp đồng EPC', time: ''}
+  - {task: 'Vận hành thương mại', time: ''}
+bim:
+  lod: '200'
+  objectives:
+  - Mô hình hóa các hạng mục công trình xây dựng chính để thể hiện trực quan, giúp các thành viên tham gia dự án hiểu rõ khi thảo luận, phân công nhiệm vụ hoặc lựa chọn giải pháp thiết kế hiệu quả; các bên liên quan hiểu rõ giải pháp thiết kế để ra quyết định phù hợp
+  - Xây dựng và sử dụng môi trường dữ liệu chung (CDE) để tăng hiệu quả lưu trữ và chia sẻ thông tin bằng định dạng kỹ thuật số, thuận lợi trong phối hợp, tiết kiệm thời gian chuẩn bị tài liệu và trao đổi thông tin dự án
+  - Hỗ trợ rà soát tổng mặt bằng, kiểm tra sự phù hợp về bố trí không gian và giao diện giữa các hạng mục, qua đó giảm việc thay đổi, điều chỉnh thiết kế ở các giai đoạn sau
+  - Tạo nguồn dữ liệu nền cho việc áp dụng BIM ở các giai đoạn thiết kế kỹ thuật, thiết kế bản vẽ thi công, thi công và quản lý vận hành sau này của dự án
+  uses:
+  - name: Xây dựng mô hình BIM
+    required: true
+    description: 'Xây dựng mô hình BIM cho các hạng mục kiến trúc, kết cấu, công nghệ, điện và hạ tầng kỹ thuật thuộc danh mục áp dụng BIM. Mô hình BIM bảo đảm thống nhất, đồng bộ với hồ sơ và bản vẽ thiết kế cơ sở; thể hiện được vị trí, kích thước chủ yếu và hình dạng không gian ba chiều của các kết cấu, thiết bị chính của công trình. Ở giai đoạn thiết kế cơ sở, đối tượng mô hình ở mức độ LOD 200: "các thành phần mô hình được thể hiện bằng đồ họa trong mô hình với các thể hiện tương đối về số lượng, kích thước, hình dạng tương đối và vị trí gần đúng; các thông tin phi hình học cũng có thể đưa vào các thành phần mô hình với LOD 200" theo Quyết định số 348/QĐ-BXD ngày 02/4/2021.'
+  - name: Đánh giá thiết kế
+    required: true
+    description: Sử dụng phần mềm chuyên dụng để quan sát, quản lý và kiểm tra mô hình BIM; thực hiện đánh giá thiết kế trong nội bộ Tư vấn và phối hợp cùng Chủ đầu tư. Các tính năng bình luận (Comment) và đánh dấu lỗi (Markup) được sử dụng trực tiếp trên mô hình trong môi trường dữ liệu chung.
+  - name: Phối hợp 3D
+    required: true
+    description: Sử dụng ứng dụng phối hợp đa bộ môn trên mô hình ba chiều làm phương thức phối hợp thiết kế và báo cáo kết quả phối hợp cho Chủ đầu tư. Mô hình các bộ môn được liên kết thành mô hình tổng hợp để rà soát tổng mặt bằng, kiểm tra sự phù hợp về bố trí không gian và giao diện giữa các hạng mục.
+  - name: Trao đổi thông tin qua môi trường dữ liệu chung (CDE)
+    required: true
+    description: Việc trao đổi thông tin của dự án được thực hiện đồng bộ và thống nhất trên môi trường dữ liệu chung. Các chức năng bình luận, đánh dấu lỗi, quản lý vấn đề (Issues), cũng như việc trao đổi và xử lý các vấn đề giữa các bên phải được thực hiện qua CDE, phù hợp với vai trò và chức năng của mỗi bên. Việc lưu trữ tài liệu, bản vẽ và mô hình được thực hiện trên CDE nhằm bảo đảm tính nhất quán, khả năng kiểm soát và truy vết thông tin.
+  limits:
+  - Mức độ phát triển thông tin của toàn bộ mô hình là LOD 200. Mô hình không thể hiện chi tiết nội thất, lan can, bậc thang, phụ kiện đường ống (van, co, tê), chi tiết liên kết kết cấu thép và bu-lông
+  - Không triển khai bản vẽ thiết kế từ mô hình BIM ở giai đoạn này. Hồ sơ bản vẽ thiết kế cơ sở được lập và phát hành theo quy trình hiện hành của Tư vấn; mô hình BIM phục vụ trực quan hóa, phối hợp và rà soát thiết kế
+  - Chưa thực hiện kiểm tra va chạm tự động (clash detection) giữa các bộ môn. Công tác phối hợp ở giai đoạn này tập trung vào kiểm tra trực quan, rà soát tổng mặt bằng và giao diện giữa các hạng mục
+  - Không sử dụng mô hình để bóc tách khối lượng, lập dự toán, mô phỏng tiến độ thi công (4D) hoặc quản lý chi phí (5D)
+  - Không mô hình hóa các hạng mục phụ trợ ngoài danh mục áp dụng BIM (nhà kho, nhà bảo vệ, nhà để xe, hàng rào, cảnh quan chi tiết)
+  scope_items: []
+org:
+  people:
+  - {name: '', org: 'PECC2', role: 'Chủ nhiệm dự án', email: ''}
+  - {name: '', org: 'PECC2', role: 'Quản lý BIM', email: ''}
+  - {name: '', org: 'PECC2', role: 'Điều phối BIM', email: ''}
+  - {name: '', org: 'PECC2', role: 'Chuyên gia quản lý dữ liệu (CDE Manager)', email: ''}
+  - {name: '', org: 'PECC2', role: 'Trưởng nhóm BIM – Xây dựng', email: ''}
+  - {name: '', org: 'PECC2', role: 'Kỹ thuật viên BIM – Xây dựng', email: ''}
+  raci_roles:
+  - {code: 'CĐT', role: 'Chủ đầu tư / Ban Quản lý dự án', org: ''}
+  - {code: 'CNDA', role: 'Chủ nhiệm dự án', org: 'PECC2'}
+  - {code: 'QLB', role: 'Quản lý BIM (BIM Manager)', org: 'PECC2'}
+  - {code: 'ĐPB', role: 'Điều phối BIM (BIM Coordinator)', org: 'PECC2'}
+  - {code: 'CDE', role: 'Chuyên gia quản lý dữ liệu (CDE Manager)', org: 'PECC2'}
+  - {code: 'TNB', role: 'Trưởng nhóm BIM bộ môn', org: 'PECC2'}
+  - {code: 'KTV', role: 'Kỹ thuật viên BIM (BIM Modeler)', org: 'PECC2'}
+  - {code: 'TVTT', role: 'Tư vấn thẩm tra', org: ''}
+  raci:
+  - {group: 'A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC', ref: 'A1', task: 'Lập Kế hoạch thực hiện BIM (BEP) và các phụ lục', values: 'I;A;R;R;C;C;I;I'}
+  - {group: 'A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC', ref: 'A2', task: 'Xem xét và phê duyệt BEP', values: 'R, A;C;C;I;I;I;I;C'}
+  - {group: 'A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC', ref: 'A3', task: 'Cung cấp và vận hành nền tảng môi trường dữ liệu chung', values: 'I;I;A;C;R;I;I;I'}
+  - {group: 'A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC', ref: 'A4', task: 'Thiết lập cấu trúc thư mục, trạng thái CDE và ma trận phân quyền', values: 'C;I;A;C;R;I;I;C'}
+  - {group: 'A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC', ref: 'A5', task: 'Cấp, thu hồi tài khoản và quyền truy cập CDE', values: 'C;I;A;I;R;I;I;I'}
+  - {group: 'A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC', ref: 'A6', task: 'Hướng dẫn sử dụng CDE cho các bên tham gia', values: 'I;I;A;C;R;I;I;I'}
+  - {group: 'A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC', ref: 'A7', task: 'Thiết lập tệp mẫu, hệ tọa độ chia sẻ và điểm gốc dự án', values: 'I;C;A;R;I;C;I;–'}
+  - {group: 'A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC', ref: 'A8', task: 'Xây dựng và phát hành thư viện đối tượng (family) dùng chung', values: '–;I;C;A;I;R;R;–'}
+  - {group: 'A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC', ref: 'A9', task: 'Thống nhất quy ước đặt tên tập tin, cấu kiện, vật liệu và bảng màu', values: 'I;I;A;R;C;C;I;I'}
+  - {group: 'B. TẠO LẬP MÔ HÌNH', ref: 'B1', task: 'Cung cấp đầu vào thiết kế cho nhóm BIM (tổng mặt bằng, số liệu bộ môn)', values: 'C;A;I;C;–;R;I;–'}
+  - {group: 'B. TẠO LẬP MÔ HÌNH', ref: 'B2', task: 'Lập mô hình thành phần theo phạm vi được giao', values: '–;I;I;C;–;A;R;–'}
+  - {group: 'B. TẠO LẬP MÔ HÌNH', ref: 'B3', task: 'Cập nhật mô hình theo thay đổi thiết kế', values: '–;I;I;C;–;A;R;–'}
+  - {group: 'B. TẠO LẬP MÔ HÌNH', ref: 'B4', task: 'Gán thông tin phi hình học theo ma trận LOD', values: '–;–;I;C;–;A;R;–'}
+  - {group: 'B. TẠO LẬP MÔ HÌNH', ref: 'B5', task: 'Kiểm tra chất lượng trước khi chia sẻ', values: '–;I;I;I;–;R, A;R;–'}
+  - {group: 'B. TẠO LẬP MÔ HÌNH', ref: 'B6', task: 'Chuyển mô hình sang trạng thái Shared trên CDE', values: '–;–;I;I;C;A;R;–'}
+  - {group: 'C. PHỐI HỢP VÀ KIỂM SOÁT', ref: 'C1', task: 'Liên kết các mô hình thành phần thành mô hình tổng hợp', values: '–;I;I;R, A;C;C;I;–'}
+  - {group: 'C. PHỐI HỢP VÀ KIỂM SOÁT', ref: 'C2', task: 'Kiểm tra phối hợp trực quan, rà soát tổng mặt bằng và giao diện', values: 'I;C;C;R, A;–;C;I;–'}
+  - {group: 'C. PHỐI HỢP VÀ KIỂM SOÁT', ref: 'C3', task: 'Ghi nhận, phân công và theo dõi vấn đề (Issues) trên CDE', values: 'I;I;I;R, A;C;C;I;I'}
+  - {group: 'C. PHỐI HỢP VÀ KIỂM SOÁT', ref: 'C4', task: 'Xử lý vấn đề thuộc phạm vi bộ môn', values: '–;I;I;C;–;A;R;–'}
+  - {group: 'C. PHỐI HỢP VÀ KIỂM SOÁT', ref: 'C5', task: 'Tổ chức và chủ trì họp phối hợp BIM', values: 'I;C;A;R;I;C;I;I'}
+  - {group: 'C. PHỐI HỢP VÀ KIỂM SOÁT', ref: 'C6', task: 'Kiểm tra chất lượng Lớp 3 trước khi phát hành', values: '–;I;A;R;C;C;I;–'}
+  - {group: 'C. PHỐI HỢP VÀ KIỂM SOÁT', ref: 'C7', task: 'Quyết định phương án xử lý khi các bộ môn không thống nhất', values: 'I;R, A;C;C;–;C;–;–'}
+  - {group: 'D. CHUYỂN GIAO VÀ NGHIỆM THU', ref: 'D1', task: 'Xuất định dạng trao đổi (IFC, NWC, NWD) và kiểm tra dung lượng tệp', values: '–;–;I;A;C;C;R;–'}
+  - {group: 'D. CHUYỂN GIAO VÀ NGHIỆM THU', ref: 'D2', task: 'Phê duyệt phát hành sản phẩm BIM', values: 'I;C;R, A;C;I;I;I;–'}
+  - {group: 'D. CHUYỂN GIAO VÀ NGHIỆM THU', ref: 'D3', task: 'Phát hành lên CDE, chuyển trạng thái Published và lập Transmittal', values: 'I;I;A;C;R;I;I;I'}
+  - {group: 'D. CHUYỂN GIAO VÀ NGHIỆM THU', ref: 'D4', task: 'Lập Báo cáo mô hình thông tin công trình BIM', values: 'I;C;R, A;R;C;C;I;–'}
+  - {group: 'D. CHUYỂN GIAO VÀ NGHIỆM THU', ref: 'D5', task: 'Xem xét, cho ý kiến về sản phẩm BIM', values: 'R, A;C;C;I;I;I;–;R'}
+  - {group: 'D. CHUYỂN GIAO VÀ NGHIỆM THU', ref: 'D6', task: 'Nghiệm thu sản phẩm BIM', values: 'R, A;C;C;I;I;I;–;C'}
+  - {group: 'D. CHUYỂN GIAO VÀ NGHIỆM THU', ref: 'D7', task: 'Đóng gói phiên bản theo mốc và chuyển vùng Archived', values: 'I;–;A;C;R;I;I;–'}
+  - {group: 'E. QUẢN LÝ CHUNG', ref: 'E1', task: 'Cập nhật, sửa đổi BEP trong quá trình thực hiện', values: 'C;A;R;C;C;C;I;I'}
+  - {group: 'E. QUẢN LÝ CHUNG', ref: 'E2', task: 'Quản lý TIDP/MIDP và theo dõi tiến độ chuyển giao', values: 'I;C;R, A;C;I;C;I;–'}
+  - {group: 'E. QUẢN LÝ CHUNG', ref: 'E3', task: 'Bảo đảm an toàn thông tin và sao lưu dữ liệu dự án', values: 'I;I;A;I;R;I;I;–'}
+  - {group: 'E. QUẢN LÝ CHUNG', ref: 'E4', task: 'Đào tạo, hướng dẫn nội bộ về BIM', values: '–;I;A;R;R;C;I;–'}
+models:
+  areas: []
+  files:
+  - {area: 'Liên hợp các hạng mục', content: 'Mô hình tổng hợp', discipline: 'Chung', code: 'XXX_FS-PECC2-ZZ-FM-ZZ-0001'}
+  lod:
+  - {group: 'I. MÔ HÌNH HẠNG MỤC KẾT CẤU BÊ TÔNG', element: 'Kết cấu dầm, cột, sàn', lod: '200', info: 'Loại vật liệu'}
+  - {group: 'I. MÔ HÌNH HẠNG MỤC KẾT CẤU BÊ TÔNG', element: 'Tường', lod: '200', info: 'Loại vật liệu'}
+  - {group: 'I. MÔ HÌNH HẠNG MỤC KẾT CẤU BÊ TÔNG', element: 'Mái', lod: '200', info: 'Loại vật liệu'}
+  - {group: 'I. MÔ HÌNH HẠNG MỤC KẾT CẤU BÊ TÔNG', element: 'Cửa đi, cửa sổ', lod: '200', info: 'Loại vật liệu'}
+  - {group: 'I. MÔ HÌNH HẠNG MỤC KẾT CẤU BÊ TÔNG', element: 'Móng, cọc, đài móng', lod: '200', info: 'Loại vật liệu, cao độ đáy móng'}
+  - {group: 'II. MÔ HÌNH HẠNG MỤC KẾT CẤU THÉP', element: 'Kết cấu chính (khung thép, dầm, cột, sàn, mái)', lod: '200', info: 'Loại vật liệu'}
+  - {group: 'II. MÔ HÌNH HẠNG MỤC KẾT CẤU THÉP', element: 'Sàn thao tác', lod: '200', info: 'Loại vật liệu, cao độ'}
+  - {group: 'III. MÔ HÌNH HẠNG MỤC CÔNG NGHỆ', element: 'Thiết bị công nghệ chính', lod: '200', info: 'Loại thiết bị, công suất'}
+  - {group: 'III. MÔ HÌNH HẠNG MỤC CÔNG NGHỆ', element: 'Hệ thống đường ống công nghệ chính', lod: '200', info: 'Loại vật liệu, đường kính danh nghĩa'}
+  - {group: 'IV. MÔ HÌNH HẠNG MỤC ĐIỆN', element: 'Máy biến áp chính', lod: '200', info: 'Loại thiết bị, công suất, tỷ số biến áp'}
+  - {group: 'IV. MÔ HÌNH HẠNG MỤC ĐIỆN', element: 'Thiết bị nhất thứ sân phân phối', lod: '200', info: 'Loại thiết bị, cấp điện áp'}
+cde:
+  name: vCDE
+  provider: PECC2
+  intro: Môi trường dữ liệu chung áp dụng cho dự án là vCDE – nền tảng quản lý dữ liệu công trình cho toàn bộ vòng đời dự án do PECC2 phát triển và vận hành, được tổ chức theo ISO 19650 và TCVN 14177. Theo khoản 2 Điều 8 Nghị định số 217/2026/NĐ-CP, phạm vi, nội dung áp dụng BIM và yêu cầu thông tin trao đổi do các bên thỏa thuận trong hợp đồng; nền tảng CDE nêu trên được Tư vấn đề xuất và sẽ được áp dụng chính thức sau khi có ý kiến chấp thuận của Chủ đầu tư.
+  size_limit: 500 MB
+  modules:
+  - {name: 'Quản lý tài liệu', purpose: 'Lưu trữ, kiểm soát phiên bản tự động, gán trạng thái CDE theo thư mục, kiểm tra tiêu chuẩn đặt tên khi tải lên'}
+  - {name: 'Xem xét (Review)', purpose: 'Rà soát nội bộ Tư vấn trước khi chia sẻ; áp dụng mã phản hồi theo ISO 19650'}
+  - {name: 'Trình duyệt (Submittal)', purpose: 'Trình hồ sơ và mô hình lên Chủ đầu tư, đơn vị thẩm tra; theo dõi vòng trình duyệt'}
+  - {name: 'Phân phối tài liệu (Transmittal)', purpose: 'Phát hành chính thức tài liệu tới các bên, xác nhận đã nhận, theo dõi người nhận'}
+  - {name: 'Mô hình BIM', purpose: 'Tải lên IFC, xem mô hình 3D trực tiếp trên trình duyệt, so sánh phiên bản, ghi chú trên mô hình'}
+  - {name: 'Vấn đề và cộng tác', purpose: 'Quản lý nhật ký vấn đề (Issues) gắn vị trí 3D, nhật ký kiểm soát tài liệu (DCL), biểu đồ đường cong S theo dõi tiến độ nộp hồ sơ'}
+  - {name: 'Bảng điều khiển', purpose: 'Theo dõi tiến trình quy trình, công việc của từng cá nhân, tổng quan dự án và nhật ký hoạt động phục vụ kiểm toán'}
+  status_codes:
+  - {code: 'WIP', name: 'Đang thực hiện', zone: 'WIP', meaning: 'Thông tin đang được nhóm tác giả tạo lập, chưa chia sẻ'}
+  - {code: 'S1', name: 'Phối hợp', zone: 'SHARED', meaning: 'Chia sẻ để các bộ môn phối hợp'}
+  - {code: 'S2', name: 'Thông tin tham khảo', zone: 'SHARED', meaning: 'Chia sẻ để tham khảo'}
+  - {code: 'S3', name: 'Xem xét, góp ý', zone: 'SHARED', meaning: 'Chia sẻ để xem xét và cho ý kiến'}
+  - {code: 'S4', name: 'Trình phê duyệt', zone: 'SHARED', meaning: 'Trình Chủ đầu tư xem xét chấp thuận'}
+  - {code: 'A1', name: 'Chấp thuận', zone: 'PUBLISHED', meaning: 'Được chấp thuận phát hành'}
+  - {code: 'B1', name: 'Chấp thuận có ý kiến', zone: 'PUBLISHED', meaning: 'Chấp thuận kèm ý kiến cần cập nhật ở phiên bản sau'}
+  - {code: 'CR', name: 'Hoàn công', zone: 'PUBLISHED', meaning: 'Thông tin hoàn công'}
+  - {code: 'AR', name: 'Lưu trữ', zone: 'ARCHIVED', meaning: 'Phiên bản đã thay thế hoặc lưu trữ theo mốc'}
+  folders:
+  - {level1: '01_WIP', level2: '00_QuanLyBIM', content: 'Hồ sơ quản lý BIM đang soạn thảo (BEP, MIDP, báo cáo)', suit: 'WIP'}
+  - {level1: '01_WIP', level2: '01_CV_XayDung', content: 'Mô hình đang dựng của bộ môn Xây dựng', suit: 'WIP'}
+  - {level1: '01_WIP', level2: '02_ME_CongNghe', content: 'Mô hình đang dựng của bộ môn Công nghệ', suit: 'WIP'}
+  - {level1: '01_WIP', level2: '03_EL_Dien', content: 'Mô hình đang dựng của bộ môn Điện', suit: 'WIP'}
+  - {level1: '01_WIP', level2: '04_ZZ_TongHop', content: 'Mô hình tổng hợp đang phối hợp', suit: 'WIP'}
+  - {level1: '02_SHARED', level2: '00_TaiNguyen', content: 'Tệp mẫu, tham số dùng chung, thư viện family', suit: 'S2'}
+  - {level1: '02_SHARED', level2: '01_DuLieuDauVao', content: 'Dữ liệu đầu vào (khảo sát, bản vẽ, tài liệu kỹ thuật)', suit: 'S2'}
+  - {level1: '02_SHARED', level2: '02_MoHinhThanhPhan', content: 'Mô hình thành phần đã kiểm tra bộ môn', suit: 'S1–S3'}
+  - {level1: '02_SHARED', level2: '03_MoHinhTongHop', content: 'Mô hình tổng hợp', suit: 'S1–S3'}
+  - {level1: '02_SHARED', level2: '04_HoSoBIM', content: 'BEP, phụ lục, báo cáo BIM chia sẻ để xem xét', suit: 'S3'}
+  - {level1: '02_SHARED', level2: '05_TrinhDuyet', content: 'Hồ sơ trình Chủ đầu tư theo đợt (<YYMMDD>_<Đợt trình>)', suit: 'S4'}
+  - {level1: '03_PUBLISHED', level2: '01_KeHoachBIM', content: 'BEP và phụ lục đã được chấp thuận', suit: 'A1/B1'}
+  - {level1: '03_PUBLISHED', level2: '02_MoHinh', content: 'Mô hình thành phần và tổng hợp đã phát hành', suit: 'A1/B1'}
+  - {level1: '03_PUBLISHED', level2: '03_BaoCao', content: 'Báo cáo BIM đã phát hành', suit: 'A1/B1'}
+  - {level1: '04_ARCHIVED', level2: '01_MocChuyenGiao', content: 'Gói dữ liệu theo từng mốc chuyển giao', suit: 'AR'}
+  - {level1: '04_ARCHIVED', level2: '02_PhienBanThayThe', content: 'Phiên bản đã bị thay thế', suit: 'AR'}
+  perm_roles: CĐT;CNDA;QLB;CDE;ĐPB;TNB;KTV;TVTT
+  perms:
+  - {folder: '01_WIP/00_QuanLyBIM', values: '–;V;ED;AD;ED;V;V;–'}
+  - {folder: '01_WIP/<bộ môn>', values: '–;V;ED;AD;ED;ED¹;UP¹;–'}
+  - {folder: '01_WIP/04_ZZ_TongHop', values: '–;V;ED;AD;ED;DL;DL;–'}
+  - {folder: '02_SHARED', values: 'CM;CM;ED;AD;ED;UP;DL;CM'}
+  - {folder: '02_SHARED/05_TrinhDuyet', values: 'CM;CM;ED;AD;UP;V;V;CM'}
+  - {folder: '03_PUBLISHED', values: 'DL;DL;ED;AD;DL;DL;DL;DL'}
+  - {folder: '04_ARCHIVED', values: 'V;V;V;AD;V;V;V;V'}
+  transitions:
+  - {change: 'WIP → SHARED (S1)', condition: 'Đạt kiểm tra Lớp 1 và Lớp 2', by: 'Trưởng nhóm BIM bộ môn', function: 'Quản lý tài liệu'}
+  - {change: 'S1 → S3', condition: 'Đạt kiểm tra Lớp 3', by: 'Điều phối BIM', function: 'Xem xét (Review)'}
+  - {change: 'S3 → S4', condition: 'Quản lý BIM phê duyệt phát hành', by: 'Quản lý BIM', function: 'Trình duyệt (Submittal)'}
+  - {change: 'S4 → A1/B1', condition: 'Chủ đầu tư chấp thuận', by: 'Chuyên gia quản lý dữ liệu', function: 'Phân phối tài liệu (Transmittal)'}
+  - {change: '→ AR', condition: 'Kết thúc mốc chuyển giao hoặc có phiên bản thay thế', by: 'Chuyên gia quản lý dữ liệu', function: 'Quản lý tài liệu'}
+delivery:
+  it: Tư vấn cung cấp và vận hành nền tảng môi trường dữ liệu chung vCDE cho dự án, bao gồm cấp tài khoản định danh cho các bên tham gia, thiết lập cấu trúc thư mục, phân quyền, quy trình phê duyệt và hướng dẫn sử dụng. Tư vấn bố trí máy trạm đồ họa đáp ứng yêu cầu chạy các phần mềm Revit, Navisworks và các công cụ liên quan cho nhóm thực hiện BIM.
+  formats:
+  - 'Mô hình thành phần – định dạng trao đổi phổ biến: *.ifc, *.nwc'
+  - 'Mô hình tổng hợp giai đoạn thiết kế cơ sở: *.ifc, *.nwd'
+  - 'Định dạng gốc: *.rvt đối với các mô hình bộ môn kiến trúc, kết cấu, công nghệ và điện; định dạng gốc được lưu trữ trên CDE và cung cấp cho Chủ đầu tư theo thỏa thuận tại Kế hoạch thực hiện BIM'
+  deliverables:
+  - {name: 'Kế hoạch thực hiện BIM (BEP) và các phụ lục', format: '*.docx, *.pdf', milestone: ''}
+  - {name: 'Các mô hình thành phần của dự án', format: '*.rvt, *.ifc, *.nwc', milestone: ''}
+  - {name: 'Mô hình tổng hợp', format: '*.ifc, *.nwd', milestone: ''}
+  - {name: 'Báo cáo mô hình thông tin công trình BIM', format: '*.pdf', milestone: ''}
+  - {name: 'Thiết lập và hướng dẫn sử dụng môi trường dữ liệu chung', format: '—', milestone: ''}
+  review_products: 'Danh mục sản phẩm phục vụ quá trình thẩm định gồm: các mô hình thành phần; mô hình tổng hợp; Báo cáo mô hình thông tin công trình BIM; Kế hoạch thực hiện BIM (BEP). Dữ liệu BIM nộp cho cơ quan chuyên môn về xây dựng ở định dạng mở IFC theo khoản 3 Điều 8 Nghị định số 217/2026/NĐ-CP.'
+  rounds:
+  - {name: '#01 Bản dự thảo', date: ''}
+  - {name: '#02 Bản hoàn thiện', date: ''}
+  - {name: '#03 Bản phục vụ thẩm định', date: ''}
+  midp:
+  - {group: 'KẾ HOẠCH BIM', file: 'XXX_FS-PECC2-ZZ-PR-ZZ-0001', description: 'Kế hoạch thực hiện BIM (BEP)', native: 'docx', exchange: 'pdf', lead: 'PECC2', dates: ''}
+  - {group: 'MÔ HÌNH BIM', file: 'XXX_FS-PECC2-ZZ-FM-ZZ-0001', description: 'Mô hình tổng hợp', native: 'nwf', exchange: 'nwd, ifc', lead: 'PECC2', dates: ''}
+  tidp: []
+coordination:
+  checks:
+  - {name: 'Kiểm tra trực quan mô hình bộ môn', description: 'Quan sát mô hình, đối chiếu với bản vẽ và số liệu thiết kế của bộ môn', responsible: 'Các bộ môn', software: 'Revit', frequency: 'Thường xuyên'}
+  - {name: 'Rà soát tổng mặt bằng', description: 'Kiểm tra vị trí, ranh giới chiếm đất, khoảng cách bố trí giữa các hạng mục, cao độ san nền và hành lang tuyến ống', responsible: 'Điều phối BIM', software: 'Navisworks, vCDE', frequency: 'Theo mốc mô hình'}
+  - {name: 'Kiểm tra giao diện giữa các hạng mục', description: 'Các điểm giao diện giữa hạng mục, hệ thống và với công trình bên ngoài', responsible: 'Các bộ môn, Điều phối BIM', software: 'Navisworks', frequency: 'Theo mốc mô hình'}
+  - {name: 'Kiểm tra tuân thủ quy định của BEP', description: 'Quy ước đặt tên, hệ tọa độ, mức độ LOD, thông tin phi hình học', responsible: 'Trưởng nhóm BIM bộ môn', software: 'Revit, Navisworks', frequency: 'Trước mỗi lần chia sẻ'}
+  - {name: 'Phối hợp và ghi nhận vấn đề trên CDE', description: 'Sử dụng Issues, Markup, Comment để trao đổi và theo dõi xử lý', responsible: 'Các bên tham gia', software: 'vCDE', frequency: 'Thường xuyên'}
+  software:
+  - {use: 'Mô hình kiến trúc, kết cấu, xây dựng', responsible: 'PECC2', software: 'Revit «phiên bản»', native: 'RVT', exchange: 'NWC, IFC'}
+  - {use: 'Mô hình công nghệ', responsible: 'PECC2', software: 'Revit «phiên bản»', native: 'RVT', exchange: 'NWC, IFC'}
+  - {use: 'Mô hình điện', responsible: 'PECC2', software: 'Revit «phiên bản»', native: 'RVT', exchange: 'NWC, IFC'}
+  - {use: 'Liên kết, phối hợp và kiểm tra chất lượng mô hình', responsible: 'PECC2', software: 'Navisworks «phiên bản»; vCDE', native: 'NWF/NWC', exchange: 'NWD, IFC'}
+  - {use: 'Quản lý dữ liệu, trao đổi và phát hành', responsible: 'PECC2', software: 'vCDE', native: '—', exchange: 'PDF, IFC, NWD'}
+  units: hệ thống đo lường quốc tế SI; đơn vị chiều dài sử dụng trong mô hình là milimét, đơn vị thể hiện trên hồ sơ theo quy định của từng bộ môn
+  coord_system: các mô hình sử dụng hệ tọa độ chia sẻ (Shared Coordinates) đồng bộ với hệ tọa độ áp dụng tại công trình là hệ tọa độ quốc gia VN-2000; cao độ theo hệ cao độ quốc gia
+  coord_params: múi chiếu 3°, kinh tuyến trục «…»; tọa độ điểm gốc (X = «…»; Y = «…»).
+naming:
+  syntax: <Mã dự án>_<Giai đoạn>-<Đơn vị tạo lập>-<Khu vực/Hệ thống>-<Loại tập tin>-<Bộ môn>-<Số thứ tự>
+  example: 'Ví dụ: XXX_FS-PECC2-SW-M3-EL-0502 là mô hình 3D bộ môn Điện của khu vực sân phân phối, do PECC2 lập trong giai đoạn Báo cáo nghiên cứu khả thi.'
+  regex: ^[A-Z0-9]{2,6}_[A-Z]{2,3}-[A-Z0-9]{2,6}-[A-Z]{2}-[A-Z0-9]{2}-[A-Z]{2}-\d{4}$
+  fields:
+  - {name: 'Mã dự án', length: '2–6', required: 'Có', example: 'XXX', note: 'Mã viết tắt của dự án'}
+  - {name: 'Giai đoạn', length: '2–3', required: 'Có', example: 'FS', note: 'Theo bảng mã Giai đoạn'}
+  - {name: 'Đơn vị tạo lập', length: '2–6', required: 'Có', example: 'PECC2', note: 'Theo bảng mã Đơn vị'}
+  - {name: 'Khu vực/Hệ thống', length: '2', required: 'Có', example: 'SW', note: 'Theo bảng mã Khu vực; ZZ nếu áp dụng chung'}
+  - {name: 'Loại tập tin', length: '2', required: 'Có', example: 'M3', note: 'Theo bảng mã Loại tập tin'}
+  - {name: 'Bộ môn', length: '2', required: 'Có', example: 'EL', note: 'Theo bảng mã Bộ môn; ZZ nếu nhiều bộ môn'}
+  - {name: 'Số thứ tự', length: '4', required: 'Có', example: '0502', note: '2 chữ số nhóm khu vực + 2 chữ số thứ tự; 0001 dành cho mô hình tổng hợp và tài liệu quản lý'}
+  codes:
+  - {table: 'Giai đoạn', code: 'PFS', meaning: 'Báo cáo nghiên cứu tiền khả thi', note: ''}
+  - {table: 'Giai đoạn', code: 'FS', meaning: 'Báo cáo nghiên cứu khả thi – Thiết kế cơ sở', note: 'Giai đoạn hiện tại'}
+  - {table: 'Giai đoạn', code: 'DD', meaning: 'Thiết kế kỹ thuật', note: ''}
+  - {table: 'Giai đoạn', code: 'CD', meaning: 'Thiết kế bản vẽ thi công', note: ''}
+  - {table: 'Giai đoạn', code: 'CO', meaning: 'Thi công', note: ''}
+  - {table: 'Giai đoạn', code: 'AB', meaning: 'Hoàn công', note: ''}
+  - {table: 'Giai đoạn', code: 'OM', meaning: 'Vận hành, bảo trì', note: ''}
+  - {table: 'Đơn vị tạo lập', code: 'PECC2', meaning: 'Công ty Cổ phần Tư vấn Xây dựng Điện 2', note: ''}
+  - {table: 'Đơn vị tạo lập', code: 'ZZ', meaning: 'Áp dụng chung', note: ''}
+  - {table: 'Loại tập tin', code: 'M3', meaning: 'Mô hình 3D', note: 'rvt, ifc, nwc'}
+  - {table: 'Loại tập tin', code: 'M2', meaning: 'Mô hình 2D', note: 'dwg'}
+  - {table: 'Loại tập tin', code: 'CM', meaning: 'Mô hình phối hợp', note: 'nwf'}
+  - {table: 'Loại tập tin', code: 'FM', meaning: 'Mô hình tổng hợp', note: 'nwd, ifc'}
+  - {table: 'Loại tập tin', code: 'DR', meaning: 'Bản vẽ', note: 'dwg, pdf'}
+  - {table: 'Loại tập tin', code: 'RP', meaning: 'Báo cáo', note: 'docx, pdf'}
+  - {table: 'Loại tập tin', code: 'PR', meaning: 'Kế hoạch, quy trình', note: 'docx, pdf'}
+  - {table: 'Loại tập tin', code: 'SH', meaning: 'Bảng biểu, danh mục', note: 'xlsx, pdf'}
+  - {table: 'Loại tập tin', code: 'CR', meaning: 'Báo cáo phối hợp, xung đột', note: 'pdf, xlsx'}
+  - {table: 'Bộ môn', code: 'CV', meaning: 'Xây dựng (kiến trúc, kết cấu)', note: ''}
+  - {table: 'Bộ môn', code: 'ME', meaning: 'Công nghệ (cơ khí)', note: ''}
+  - {table: 'Bộ môn', code: 'EL', meaning: 'Điện', note: ''}
+  - {table: 'Bộ môn', code: 'ZZ', meaning: 'Nhiều bộ môn / áp dụng chung', note: ''}
+  examples:
+  - {name: 'XXX_FS-PECC2-ZZ-PR-ZZ-0001', meaning: 'Kế hoạch thực hiện BIM'}
+  - {name: 'XXX_FS-PECC2-ZZ-FM-ZZ-0001', meaning: 'Mô hình tổng hợp giai đoạn thiết kế cơ sở'}
+doc:
+  revision: A
+  issue_text: Bản A - Tháng «…»
+  month: Tháng «…»
+  prepared_by: ''
+  checked_by: ''
+  sign_date: ''
+  documents:
+  - {doc: 'bep', code: 'XXX_FS-PECC2-ZZ-PR-ZZ-0001'}
+  - {doc: 'pl_raci', code: 'XXX_FS-PECC2-ZZ-PR-ZZ-0002'}
+  - {doc: 'pl_naming', code: 'XXX_FS-PECC2-ZZ-PR-ZZ-0003'}
+  - {doc: 'pl_midp', code: 'XXX_FS-PECC2-ZZ-SH-ZZ-0004'}
+  - {doc: 'pl_cde', code: 'XXX_FS-PECC2-ZZ-PR-ZZ-0005'}
+  revisions:
+  - {rev: 'A', date: '', prepared: 'PECC2', checked: 'PECC2', approved: '', description: 'Phát hành lần đầu để Chủ đầu tư xem xét'}
+sources:
+  folders: []
