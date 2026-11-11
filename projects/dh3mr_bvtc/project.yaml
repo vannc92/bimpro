@@ -1,0 +1,1456 @@
+title: BEP DH3MR – Thiết kế bản vẽ thi công
+stage: BVTC
+is_template: false
+general:
+  name: Mở rộng mái che kho than Nhà máy nhiệt điện Duyên Hải 3 mở rộng
+  code: DH3MR.KT
+  owner_short: EVNPMB3
+  author_short: PECC2
+  author_name: Công ty Cổ phần Tư vấn Xây dựng Điện 2
+  author_role: Nhà thầu
+  package: 'Gói thầu EPC-DH3MR: Thiết kế, cung cấp vật tư và thi công xây dựng công trình'
+  report_title: 'THIẾT KẾ BẢN VẼ THI CÔNG – TẬP 6: THIẾT KẾ BIM'
+  info:
+  - label: Tên dự án
+    value: Mở rộng mái che kho than Nhà máy nhiệt điện Duyên Hải 3 mở rộng
+  - label: Tên gói thầu
+    value: 'Gói thầu EPC-DH3MR: Thiết kế, cung cấp vật tư và thi công xây dựng công trình (mã TBMT IB2600550338)'
+  - label: Chủ đầu tư / Đại diện Chủ đầu tư
+    value: Tập đoàn Điện lực Việt Nam (EVN) / Ban Quản lý dự án Điện 3 (EVNPMB3)
+  - label: Tư vấn giám sát, quản lý BIM
+    value: 'Nhà thầu gói thầu 02TV-DH3MR: Thẩm tra TKBVTC, quản lý BIM và giám sát thi công'
+  - label: Nhà thầu EPC
+    value: Liên danh «…», trong đó Công ty Cổ phần Tư vấn Xây dựng Điện 2 (PECC2) thực hiện BIM
+  - label: Đơn vị vận hành
+    value: Công ty Nhiệt điện Duyên Hải
+  - label: Tư vấn lập BCNCKT, TKCS
+    value: Công ty Cổ phần Tư vấn Xây dựng Điện 3 (EVNPECC3)
+  - label: Địa điểm
+    value: Khu vực kho than hiện hữu NMNĐ Duyên Hải 3 mở rộng, Trung tâm Điện lực Duyên Hải, phường Duyên Hải, tỉnh
+      Vĩnh Long
+  - label: Loại, cấp công trình
+    value: Công trình năng lượng, dự án nhóm B; công trình cấp I
+  - label: Quy mô
+    value: Mái che mở rộng dài 185 m, rộng 113 m, cao 42,78 m, nối tiếp kho than kín hiện hữu 82,5 m × 113 m; sau
+      mở rộng tổng kích thước 267,5 m × 113 m, bảo đảm dự trữ than cho 01 tổ máy vận hành BMCR khoảng 30 ngày
+  - label: Giải pháp kết cấu chính
+    value: Móng cọc PHC D600 khoan hạ; hệ khung cột – dầm BTCT đỡ mái; mái vòm giàn không gian thép ống liên kết
+      nút cầu, sơn chống ăn mòn 3 lớp; tôn mạ kẽm xen kẽ tôn lấy sáng, nẹp diềm mái; bọc chống cháy kết cấu thép
+      đến cao độ tối thiểu 5 m
+  - label: Hệ thống kèm theo
+    value: Chiếu sáng và chiếu sáng sự cố, tủ điện, tuyến cáp, nối đất và chống quá điện áp kết nối lưới hiện hữu;
+      hệ thống chữa cháy bổ sung; thoát nước mái và mương thoát nước nhiễm than
+  - label: Điều kiện đặc thù
+    value: Thi công trong khu vực kho than đang vận hành (máy đánh phá đống, băng tải); tháo dỡ tường chắn gió,
+      trụ, đèn, mương nhiễm than hiện hữu và hoàn trả mặt bằng
+  - label: Giai đoạn áp dụng BIM
+    value: Thiết kế bản vẽ thi công, thi công xây dựng và hoàn công.
+  parties:
+  - code: CĐT
+    role: Chủ đầu tư / Đại diện Chủ đầu tư
+    name: Tập đoàn Điện lực Việt Nam – Ban Quản lý dự án Điện 3
+    short: EVNPMB3
+  - code: TVGS
+    role: Tư vấn giám sát, quản lý BIM (gói 02TV-DH3MR)
+    name: ''
+    short: ''
+  - code: NT
+    role: Nhà thầu EPC – thực hiện BIM
+    name: Công ty Cổ phần Tư vấn Xây dựng Điện 2
+    short: PECC2
+  - code: VH
+    role: Đơn vị vận hành
+    name: Công ty Nhiệt điện Duyên Hải
+    short: ''
+  - code: TKCS
+    role: Tư vấn lập BCNCKT, TKCS
+    name: Công ty Cổ phần Tư vấn Xây dựng Điện 3
+    short: PECC3
+basis:
+  legal:
+  - Luật Xây dựng số 135/2025/QH15
+  - Nghị định số 217/2026/NĐ-CP ngày 19/6/2026 của Chính phủ quy định chi tiết một số điều của Luật Xây dựng về
+    quản lý hoạt động xây dựng, trong đó Điều 8 quy định ứng dụng BIM và giải pháp công nghệ số, Điều 23 quy định
+    nội dung hồ sơ thiết kế xây dựng triển khai sau thiết kế cơ sở (bao gồm BIM)
+  - Nghị định số 207/2026/NĐ-CP ngày 15/6/2026 của Chính phủ quy định chi tiết một số điều của Luật Xây dựng về
+    quản lý chất lượng, thi công xây dựng và bảo trì công trình xây dựng
+  - Quyết định số 2500/QĐ-TTg ngày 22/12/2016 của Thủ tướng Chính phủ phê duyệt Đề án áp dụng mô hình thông tin
+    công trình (BIM) trong hoạt động xây dựng và quản lý vận hành công trình
+  - Quyết định số 258/QĐ-TTg ngày 17/3/2023 của Thủ tướng Chính phủ phê duyệt Lộ trình áp dụng BIM trong hoạt động
+    xây dựng
+  - Quyết định số 348/QĐ-BXD ngày 02/4/2021 của Bộ Xây dựng công bố Hướng dẫn chung áp dụng mô hình thông tin công
+    trình (BIM)
+  - Luật An ninh mạng số 116/2025/QH15
+  - Quyết định số 789/QĐ-EVN ngày 10/6/2025 của Tập đoàn Điện lực Việt Nam ban hành Quy định về công tác đầu tư
+    xây dựng trong EVN
+  contracts:
+  - Quyết định số 917/QĐ-EVN ngày 12/8/2026 của EVN phê duyệt dự án Mở rộng mái che kho than NMNĐ Duyên Hải 3 mở
+    rộng
+  - Quyết định số 1689/QĐ-EVNPMB3 ngày 12/8/2026 của Ban Quản lý dự án Điện 3 phê duyệt Nhiệm vụ kỹ thuật công tác
+    lập TKBVTC, trong đó mục 6 Phụ lục 1 quy định yêu cầu áp dụng BIM của dự án
+  - Quyết định số 1096/QĐ-EVN ngày 23/9/2026 của EVN phê duyệt E-HSMT gói thầu EPC-DH3MR (Chương V, mục III.3 –
+    Nhiệm vụ của Nhà thầu trong việc thực hiện BIM)
+  - Hợp đồng EPC số «…» ngày «…» giữa «…» và Liên danh «…»
+  - Hồ sơ BCNCKT, bản vẽ thiết kế cơ sở và mô hình BIM giai đoạn BCNCKT/TKCS do EVNPECC3 lập (tệp DH3MR.KT-PECC3-BEP-ZZ-ZZ-0001.rvt)
+  - Kế hoạch thực hiện BIM sơ bộ trong E-HSDT của Nhà thầu
+  note: 'Dự án Mở rộng mái che kho than NMNĐ Duyên Hải 3 mở rộng là công trình năng lượng cấp I, đã được áp dụng
+    BIM từ giai đoạn lập Báo cáo nghiên cứu khả thi theo Điều 8 Nghị định số 217/2026/NĐ-CP. Ở giai đoạn thiết kế
+    xây dựng triển khai sau thiết kế cơ sở, hồ sơ TKBVTC phải bao gồm BIM theo Điều 23 Nghị định số 217/2026/NĐ-CP
+    và mục 6 Phụ lục 1 Nhiệm vụ kỹ thuật được phê duyệt tại Quyết định số 1689/QĐ-EVNPMB3 (biên chế thành Tập 6
+    – Thiết kế BIM); dữ liệu BIM được nộp ở định dạng mở IFC theo khoản 3 Điều 8 của Nghị định. Kế hoạch thực hiện
+    BIM này được lập theo khoản 1 mục 3.1.2 Chương V E-HSMT và trình Chủ đầu tư chấp thuận trước khi mô hình hóa.
+    Khi có khác biệt, thứ tự ưu tiên áp dụng là: Hợp đồng, E-HSMT và Nhiệm vụ kỹ thuật, Kế hoạch thực hiện BIM này,
+    quy trình nội bộ của Nhà thầu.'
+  standards:
+  - name: TCVN 14177-1
+    date: '2024'
+    description: 'Tổ chức và số hóa thông tin về công trình xây dựng, bao gồm BIM – Quản lý thông tin sử dụng BIM
+      – Phần 1: Khái niệm và nguyên tắc (tương đương ISO 19650-1)'
+    requirement: Bắt buộc (E-HSMT)
+  - name: TCVN 14177-2
+    date: '2024'
+    description: 'Phần 2: Giai đoạn chuyển giao tài sản (tương đương ISO 19650-2)'
+    requirement: Bắt buộc (E-HSMT)
+  - name: TCVN 14176-2
+    date: '2024'
+    description: 'Công trình xây dựng – Tổ chức thông tin về công trình xây dựng – Phần 2: Khung phân loại'
+    requirement: Bắt buộc (E-HSMT)
+  - name: ISO 19650-1, -2
+    date: '2018'
+    description: Tổ chức và số hóa thông tin về công trình xây dựng – Quản lý thông tin sử dụng BIM
+    requirement: Bắt buộc (E-HSMT)
+  - name: Quyết định số 348/QĐ-BXD
+    date: 02/4/2021
+    description: Hướng dẫn chung áp dụng mô hình thông tin công trình (BIM)
+    requirement: Áp dụng
+  - name: ISO 19650-3
+    date: '2020'
+    description: Giai đoạn vận hành tài sản – cơ sở cấu trúc dữ liệu hoàn công bàn giao vận hành
+    requirement: Tham khảo
+  - name: ISO 16739-1
+    date: '2024'
+    description: Industry Foundation Classes (IFC) – định dạng mở để trao đổi và nộp mô hình
+    requirement: Áp dụng
+schedule:
+  milestones:
+  - task: T0 – Hợp đồng có hiệu lực
+    time: «…»
+  - task: Hoàn thiện, trình Kế hoạch thực hiện BIM (BEP)
+    time: T0 + 14 ngày
+  - task: T1 – Lập, thẩm tra, thẩm định và phê duyệt hồ sơ TKBVTC đợt 1 (các đợt sau, mỗi đợt 10 ngày)
+    time: T0 + 30 ngày
+  - task: T2 – Thi công phần cọc, móng
+    time: T1 + 90 ngày
+  - task: T3 – Gia công chế tạo hệ khung giàn, tôn mái, phụ kiện, vận chuyển và lắp đặt hoàn chỉnh
+    time: T1 + 130 ngày
+  - task: T4 – Hoàn thiện công trình
+    time: T3 + 5 ngày
+  - task: T5 – Nghiệm thu hoàn thành
+    time: 31/3/2027
+bim:
+  lod: '350'
+  features:
+    drawings: true
+    clash: true
+    qto: true
+    sim4d: true
+    existing: true
+    asbuilt: true
+    supervisor: true
+  objectives:
+  - Thiết lập mô hình BIM tương ứng giai đoạn TKBVTC theo từng bộ môn trên cơ sở mô hình BCNCKT/TKCS do Chủ đầu
+    tư cung cấp, phối hợp 3D và phát hiện xung đột trước khi phát hành hồ sơ TKBVTC
+  - Đưa các hạng mục hiện hữu có liên quan (móng kho than, tường chắn than, tường chắn gió, mái che, mương thoát
+    nước mưa, mương thoát nước nhiễm than, hạ tầng kỹ thuật) vào mô hình để phối hợp, kiểm tra với các hạng mục
+    xây dựng mới
+  - Mô phỏng tiến độ và biện pháp thi công (BIM 4D) ở mức phù hợp với đặc thù thi công trong kho than đang vận hành
+  - Bóc tách khối lượng từ mô hình để hỗ trợ tính toán khối lượng xây lắp, vật tư theo từng đợt thi công
+  - Hoàn thiện mô hình hoàn công và dữ liệu hoàn công bàn giao cho Công ty Nhiệt điện Duyên Hải phục vụ quản lý
+    vận hành, bảo trì
+  uses:
+  - name: Lập Kế hoạch thực hiện BIM (BEP)
+    required: true
+    description: Nhà thầu hoàn thiện BEP trong 14 ngày kể từ ngày Hợp đồng có hiệu lực, thống nhất giải pháp CDE,
+      quy tắc đặt tên, ma trận LOD, ma trận kiểm tra xung đột, MIDP/TIDP và ma trận trách nhiệm; BEP được trình
+      Chủ đầu tư chấp thuận trước khi mô hình hóa và được cập nhật khi có thay đổi phạm vi hoặc tiến độ.
+  - name: Mô hình hiện trạng
+    required: true
+    description: Mô hình BCNCKT/TKCS do Chủ đầu tư cung cấp được kiểm tra về hệ tọa độ, cao độ, đơn vị và đối chiếu
+      với các bản vẽ hoàn công kho than hiện hữu (móng kho than, móng tường chắn gió, đầu cọc). Các hạng mục hiện
+      hữu có liên quan được bổ sung ở mức LOD 200 để phục vụ kiểm tra và thiết kế giao diện.
+  - name: Mô hình TKBVTC
+    required: true
+    description: 'Mô hình kết cấu, xây dựng, điện và PCCC được lập theo từng đợt TKBVTC ở mức LOD 350 theo mục 3.3.4
+      Chương V E-HSMT: ngoài hình học chính xác về số lượng, kích thước, hình dạng, vị trí và hướng, mô hình thể
+      hiện giao diện, liên kết với các cấu kiện liên quan. Mô hình được sử dụng để trích xuất một số loại bản vẽ
+      và bảng thống kê khối lượng, và để đánh giá giải pháp thiết kế: hình học mái vòm và vị trí nối tiếp với mái
+      hiện hữu, bố trí tấm lấy sáng, tuyến thoát nước mái, vị trí đèn và tủ điện, bố trí hệ thống chữa cháy bổ sung.'
+  - name: Phối hợp 3D, kiểm tra xung đột
+    required: true
+    description: Các mô hình bộ môn và mô hình hiện trạng được tích hợp thành mô hình tổng hợp theo chu kỳ trong
+      mỗi đợt TKBVTC. Các xung đột được nhận diện, phân loại và giao trách nhiệm xử lý thông qua các phiên họp điều
+      phối. Hồ sơ TKBVTC của từng đợt chỉ được phát hành khi các xung đột đã được giải quyết.
+  - name: Bóc tách khối lượng từ mô hình
+    required: true
+    description: Phạm vi bóc tách tập trung vào các cấu kiện chính như cọc, bê tông, cốt thép, kết cấu thép, tôn
+      mái, phụ kiện và thiết bị điện – chiếu sáng. Khối lượng được tổng hợp theo từng đợt thi công để phục vụ báo
+      cáo kết quả BIM. Việc bóc tách này mang tính hỗ trợ kiểm tra, đối chiếu khối lượng và không sử dụng cho mục
+      đích nghiệm thu, thanh toán của hợp đồng EPC.
+  - name: Mô phỏng tiến độ thi công (BIM 4D)
+    required: true
+    description: Mô hình BIM được chia theo các phân đoạn thi công và liên kết với tiến độ tổng thể đã được phê
+      duyệt để mô phỏng trình tự thi công, bao gồm thi công cọc – móng, lắp dựng kết cấu khung – giàn mái, vùng
+      hoạt động của cẩu và phạm vi che phủ đống than. Mô phỏng 4D là công cụ hỗ trợ xem xét, đánh giá kế hoạch thi
+      công; việc cập nhật mô phỏng không mang tính bắt buộc xuyên suốt quá trình thi công.
+  - name: Trao đổi thông tin trên CDE
+    required: true
+    description: Toàn bộ thông tin BIM của gói thầu được quản lý trên CDE theo các trạng thái Đang thực hiện – Chia
+      sẻ – Phát hành – Lưu trữ. Các vấn đề thiết kế và thi công, RFI, RFC được trao đổi giữa các bên thông qua CDE;
+      Nhà thầu sử dụng CDE để truy cập mô hình tại công trường và lưu trữ thông tin hiện trường (báo cáo, hình ảnh,
+      vấn đề).
+  - name: Mô hình hoàn công
+    required: true
+    description: Mô hình thiết kế được cập nhật theo thực tế thi công và bản vẽ hoàn công để hình thành mô hình
+      hoàn công bàn giao cho Chủ đầu tư.
+  - name: Bàn giao dữ liệu cho đơn vị vận hành
+    required: true
+    description: Mô hình hoàn công, tài liệu hoàn công và Báo cáo lưu trữ dữ liệu BIM được bàn giao cho Chủ đầu
+      tư và Công ty Nhiệt điện Duyên Hải để sử dụng trong giai đoạn vận hành.
+  limits:
+  - Mức độ phát triển thông tin của các hạng mục xây dựng mới là LOD 350; riêng bọc chống cháy và nối đất ở mức
+    LOD 300. Các hạng mục hiện hữu, khối bao thiết bị vận hành và mặt bằng tổ chức thi công ở mức LOD 200–300, đủ
+    cho kiểm tra xung đột và thiết kế giao diện
+  - Bản vẽ TKBVTC được lập theo quy trình thiết kế của Nhà thầu; chỉ một số loại bản vẽ và bảng thống kê được trích
+    xuất trực tiếp từ mô hình, danh mục cụ thể nêu tại MIDP
+  - Khối lượng bóc tách từ mô hình dùng để hỗ trợ kiểm tra, đối chiếu; không dùng cho nghiệm thu, thanh toán của
+    hợp đồng EPC. Dự toán chi phí (BIM 5D) nêu tại Nhiệm vụ kỹ thuật được đáp ứng ở mức cung cấp khối lượng từ mô
+    hình làm đầu vào cho công tác dự toán «cần Chủ đầu tư xác nhận»
+  - Mô phỏng 4D thực hiện cho các công tác chính (cọc – móng, lắp dựng khung – giàn mái, vùng hoạt động của cẩu);
+    không cập nhật bắt buộc xuyên suốt quá trình thi công
+  - Không mô hình hóa thiết bị công nghệ của kho than (máy đánh phá đống, băng tải) ngoài khối bao phạm vi hoạt
+    động
+  scope_items:
+  - 'Hạng mục hiện hữu có liên quan: móng và cọc kho than, tường chắn than, móng và tường chắn gió, mái vòm hiện
+    hữu, mương thoát nước mưa, mương thoát nước nhiễm than, hạ tầng kỹ thuật'
+  - Cọc, móng, đài, giằng kho than mở rộng
+  - Hệ khung cột – dầm BTCT đỡ mái
+  - Giàn không gian mái vòm (thanh, nút cầu, gối), tôn mái, tôn lấy sáng, nẹp diềm, bọc chống cháy
+  - Tường chắn than, mương thoát nước nhiễm than khu vực mở rộng; máng và hệ thống thoát nước mái
+  - Chiếu sáng, chiếu sáng sự cố, tủ điện, tuyến cáp, nối đất – chống quá điện áp
+  - Hệ thống chữa cháy bổ sung
+  - Mặt bằng tổ chức thi công, bãi tập kết, vị trí cẩu, phạm vi che chắn bảo vệ băng tải (phục vụ 4D)
+org:
+  chart_image: ''
+  people:
+  - name: ''
+    org: PECC2
+    role: Giám đốc dự án
+    email: ''
+  - name: ''
+    org: PECC2
+    role: Giám đốc kỹ thuật
+    email: ''
+  - name: ''
+    org: PECC2
+    role: Quản lý BIM
+    email: ''
+  - name: ''
+    org: PECC2
+    role: Điều phối BIM
+    email: ''
+  - name: ''
+    org: PECC2
+    role: Quản lý CDE
+    email: ''
+  - name: ''
+    org: PECC2
+    role: Trưởng nhóm BIM – Kết cấu
+    email: ''
+  - name: ''
+    org: PECC2
+    role: Trưởng nhóm BIM – Xây dựng
+    email: ''
+  - name: ''
+    org: PECC2
+    role: Trưởng nhóm BIM – Điện
+    email: ''
+  - name: ''
+    org: PECC2
+    role: Trưởng nhóm BIM – Công nghệ (PCCC)
+    email: ''
+  - name: ''
+    org: PECC2
+    role: Kỹ thuật viên BIM
+    email: ''
+  raci_roles:
+  - code: CĐT
+    role: Chủ đầu tư / Ban Quản lý dự án Điện 3
+    org: EVNPMB3
+  - code: TVGS
+    role: Tư vấn giám sát, quản lý BIM (gói 02TV-DH3MR)
+    org: ''
+  - code: GĐDA
+    role: Giám đốc dự án của Nhà thầu EPC
+    org: PECC2
+  - code: QLB
+    role: Quản lý BIM (BIM Manager)
+    org: PECC2
+  - code: ĐPB
+    role: Điều phối BIM (BIM Coordinator)
+    org: PECC2
+  - code: CDE
+    role: Quản lý CDE của Nhà thầu
+    org: PECC2
+  - code: TNB
+    role: Trưởng nhóm BIM bộ môn
+    org: PECC2
+  - code: KTV
+    role: Kỹ thuật viên BIM (BIM Modeler)
+    org: PECC2
+  - code: VH
+    role: Đơn vị vận hành
+    org: Công ty Nhiệt điện Duyên Hải
+  raci:
+  - group: A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC
+    ref: A1
+    task: Lập Kế hoạch thực hiện BIM (BEP) và các phụ lục
+    values: I;C;A;R;R;C;C;I;I
+  - group: A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC
+    ref: A2
+    task: Xem xét và chấp thuận BEP
+    values: R, A;C;I;C;I;I;I;I;I
+  - group: A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC
+    ref: A3
+    task: Cung cấp, duy trì hệ thống CDE của dự án
+    values: A;R;I;C;I;C;I;I;I
+  - group: A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC
+    ref: A4
+    task: Tổ chức thư mục, đề nghị phân quyền phần dữ liệu của Nhà thầu trên CDE
+    values: I;C;I;A;C;R;I;I;–
+  - group: A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC
+    ref: A5
+    task: Cung cấp mô hình BCNCKT/TKCS và hồ sơ hiện trạng
+    values: R, A;I;I;C;C;I;I;–;C
+  - group: A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC
+    ref: A6
+    task: Tiếp nhận, kiểm tra dữ liệu đầu vào và lập biên bản tiếp nhận
+    values: C;I;I;A;R;C;C;I;–
+  - group: A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC
+    ref: A7
+    task: Thiết lập tệp mẫu, hệ tọa độ chia sẻ và điểm gốc dự án
+    values: –;C;I;A;R;I;C;I;–
+  - group: A. CHUẨN BỊ VÀ THIẾT LẬP MÔI TRƯỜNG LÀM VIỆC
+    ref: A8
+    task: Thống nhất quy tắc đặt tên, quy ước màu, ma trận LOD
+    values: C;C;I;A;R;C;C;I;–
+  - group: B. TẠO LẬP MÔ HÌNH
+    ref: B1
+    task: Dựng mô hình hiện trạng
+    values: –;I;I;I;C;–;A;R;C
+  - group: B. TẠO LẬP MÔ HÌNH
+    ref: B2
+    task: Dựng mô hình TKBVTC theo từng đợt
+    values: –;I;I;I;C;–;A;R;–
+  - group: B. TẠO LẬP MÔ HÌNH
+    ref: B3
+    task: Gán thông tin phi hình học theo ma trận LOD/LOI
+    values: –;–;–;I;C;–;A;R;–
+  - group: B. TẠO LẬP MÔ HÌNH
+    ref: B4
+    task: Trích xuất bản vẽ, bảng khối lượng từ mô hình
+    values: –;I;I;I;C;–;A;R;–
+  - group: B. TẠO LẬP MÔ HÌNH
+    ref: B5
+    task: Kiểm tra chất lượng Lớp 1, Lớp 2 trước khi chia sẻ
+    values: –;–;–;I;I;–;R, A;R;–
+  - group: C. PHỐI HỢP VÀ KIỂM SOÁT
+    ref: C1
+    task: Tích hợp các mô hình bộ môn và hiện trạng thành mô hình tổng hợp
+    values: –;I;–;I;R, A;C;C;I;–
+  - group: C. PHỐI HỢP VÀ KIỂM SOÁT
+    ref: C2
+    task: Chạy kiểm tra xung đột và lập báo cáo xung đột
+    values: I;I;I;A;R;–;C;I;–
+  - group: C. PHỐI HỢP VÀ KIỂM SOÁT
+    ref: C3
+    task: Xử lý xung đột thuộc phạm vi bộ môn
+    values: –;I;–;I;C;–;A;R;–
+  - group: C. PHỐI HỢP VÀ KIỂM SOÁT
+    ref: C4
+    task: Chủ trì tổ chức phối hợp BIM, họp điều phối hằng tuần
+    values: I;A;I;R;R;I;C;I;C
+  - group: C. PHỐI HỢP VÀ KIỂM SOÁT
+    ref: C5
+    task: Kiểm tra độc lập mô hình, lập báo cáo xung đột và sai sót thiết kế
+    values: I;R, A;I;C;C;–;I;–;–
+  - group: C. PHỐI HỢP VÀ KIỂM SOÁT
+    ref: C6
+    task: Phê duyệt chuyển mô hình sang trạng thái Shared
+    values: –;I;I;R, A;C;C;I;–;–
+  - group: C. PHỐI HỢP VÀ KIỂM SOÁT
+    ref: C7
+    task: Quyết định phương án xử lý khi các bộ môn, các bên không thống nhất
+    values: C;C;R, A;C;C;–;C;–;C
+  - group: D. ÁP DỤNG BIM TRONG THI CÔNG
+    ref: D1
+    task: Mô phỏng tiến độ 4D và biện pháp lắp dựng
+    values: I;C;A;C;R;–;C;R;C
+  - group: D. ÁP DỤNG BIM TRONG THI CÔNG
+    ref: D2
+    task: Quản lý RFI, RFC trên CDE
+    values: C;C;I;A;R;C;C;–;–
+  - group: D. ÁP DỤNG BIM TRONG THI CÔNG
+    ref: D3
+    task: Sử dụng mô hình tại hiện trường, lưu trữ thông tin hiện trường trên CDE
+    values: I;I;A;C;R;C;–;R;–
+  - group: D. ÁP DỤNG BIM TRONG THI CÔNG
+    ref: D4
+    task: Báo cáo kết quả thực hiện BIM phục vụ nghiệm thu khối lượng theo đợt
+    values: I;C;A;R;R;–;C;I;–
+  - group: E. CHUYỂN GIAO VÀ NGHIỆM THU
+    ref: E1
+    task: Xuất định dạng trao đổi (IFC, NWD) và kiểm tra tệp
+    values: –;–;–;I;A;C;C;R;–
+  - group: E. CHUYỂN GIAO VÀ NGHIỆM THU
+    ref: E2
+    task: Phát hành, trình nộp qua hệ thống quản lý hồ sơ của Chủ đầu tư
+    values: I;I;I;A;C;R;I;–;–
+  - group: E. CHUYỂN GIAO VÀ NGHIỆM THU
+    ref: E3
+    task: Phê duyệt hồ sơ TKBVTC và sản phẩm BIM từng đợt
+    values: R, A;C;I;I;I;–;–;–;–
+  - group: E. CHUYỂN GIAO VÀ NGHIỆM THU
+    ref: E4
+    task: Lập mô hình hoàn công
+    values: I;C;I;A;C;–;R;R;C
+  - group: E. CHUYỂN GIAO VÀ NGHIỆM THU
+    ref: E5
+    task: Lập Báo cáo lưu trữ dữ liệu BIM và bàn giao cho đơn vị vận hành
+    values: I;C;A;R;C;R;I;–;I
+  - group: E. CHUYỂN GIAO VÀ NGHIỆM THU
+    ref: E6
+    task: Nghiệm thu sản phẩm BIM
+    values: R, A;C;C;C;I;–;–;–;I
+  - group: F. QUẢN LÝ CHUNG
+    ref: F1
+    task: Cập nhật, sửa đổi BEP trong quá trình thực hiện
+    values: C;C;A;R;C;C;C;I;–
+  - group: F. QUẢN LÝ CHUNG
+    ref: F2
+    task: Quản lý TIDP/MIDP và theo dõi tiến độ chuyển giao
+    values: I;I;I;R, A;C;I;C;I;–
+  - group: F. QUẢN LÝ CHUNG
+    ref: F3
+    task: Bảo đảm an toàn thông tin và sao lưu dữ liệu của Nhà thầu
+    values: I;C;I;A;I;R;I;I;–
+  - group: F. QUẢN LÝ CHUNG
+    ref: F4
+    task: Đào tạo, hướng dẫn nội bộ về BIM và CDE
+    values: –;–;I;A;R;R;C;I;–
+models:
+  disciplines: kết cấu, kiến trúc, xây dựng, điện, cơ (PCCC)
+  areas:
+  - area: Hạng mục hiện hữu
+    discipline: Kết cấu, Xây dựng (STR, AST)
+    scope: Móng và cọc kho than, tường chắn than, móng và tường chắn gió, mái vòm hiện hữu, mương thoát nước mưa,
+      mương thoát nước nhiễm than, hạ tầng kỹ thuật; khối bao phạm vi hoạt động máy đánh phá đống và băng tải
+  - area: Cọc, móng kho than mở rộng
+    discipline: Kết cấu (STR)
+    scope: Cọc PHC D600, đài móng, giằng móng
+  - area: Khung đỡ mái
+    discipline: Kết cấu (STR)
+    scope: Hệ khung cột – dầm BTCT, bản mã và bu lông neo gối giàn
+  - area: Mái vòm
+    discipline: Kết cấu, Kiến trúc (STR, ARC)
+    scope: Giàn không gian (thanh, nút cầu, gối); tôn mái, tôn lấy sáng, nẹp diềm, xà gồ; bọc chống cháy
+  - area: Xây dựng, thoát nước
+    discipline: Xây dựng (AST)
+    scope: Tường chắn than, mương thoát nước nhiễm than khu vực mở rộng; máng và hệ thống thoát nước mái
+  - area: Điện
+    discipline: Điện (ELC)
+    scope: Chiếu sáng, chiếu sáng sự cố, tủ điện, tuyến cáp, nối đất – chống quá điện áp
+  - area: Phòng cháy chữa cháy
+    discipline: Cơ (MEC)
+    scope: Đường ống và thiết bị chữa cháy bổ sung
+  - area: Tổ chức thi công
+    discipline: Tất cả bộ môn (ALL)
+    scope: Mặt bằng tổ chức thi công, bãi tập kết, vị trí cẩu, phạm vi che chắn bảo vệ băng tải (phục vụ 4D)
+  files:
+  - area: Hạng mục hiện hữu
+    content: Mô hình hiện trạng
+    discipline: STR, AST
+    code: DH3MR.KT-PECC2-M3-STR_HT
+  - area: Cọc, móng kho than mở rộng
+    content: Cọc, đài, giằng móng
+    discipline: STR
+    code: DH3MR.KT-PECC2-M3-STR_MONG
+  - area: Khung đỡ mái
+    content: Khung cột – dầm BTCT
+    discipline: STR
+    code: DH3MR.KT-PECC2-M3-STR_KHUNG
+  - area: Mái vòm
+    content: Giàn không gian, nút cầu, gối
+    discipline: STR
+    code: DH3MR.KT-PECC2-M3-STR_GIAN
+  - area: Mái vòm
+    content: Tôn mái, tôn lấy sáng, nẹp diềm, bọc chống cháy
+    discipline: ARC
+    code: DH3MR.KT-PECC2-M3-ARC_MAI
+  - area: Xây dựng, thoát nước
+    content: Tường chắn than, mương, thoát nước mái
+    discipline: AST
+    code: DH3MR.KT-PECC2-M3-AST
+  - area: Điện
+    content: Chiếu sáng, tủ điện, tuyến cáp, nối đất
+    discipline: ELC
+    code: DH3MR.KT-PECC2-M3-ELC
+  - area: Phòng cháy chữa cháy
+    content: Hệ thống chữa cháy bổ sung
+    discipline: MEC
+    code: DH3MR.KT-PECC2-M3-MEC
+  - area: Tổ chức thi công
+    content: Mặt bằng thi công, cẩu, bãi tập kết
+    discipline: ALL
+    code: DH3MR.KT-PECC2-M3-ALL_TC
+  - area: Liên hợp các hạng mục
+    content: Mô hình tổng hợp (phối hợp)
+    discipline: ALL
+    code: DH3MR.KT-PECC2-CM-ALL
+  lod:
+  - group: I. MÔ HÌNH KẾT CẤU MÓNG VÀ KHUNG BÊ TÔNG CỐT THÉP
+    element: Cọc PHC D600
+    lod: '350'
+    info: Mã cọc, đường kính, chiều dài, cao độ mũi/đầu cọc, mác bê tông, sức chịu tải thiết kế, đợt thi công
+  - group: I. MÔ HÌNH KẾT CẤU MÓNG VÀ KHUNG BÊ TÔNG CỐT THÉP
+    element: Đài móng, giằng móng
+    lod: '350'
+    info: Mã cấu kiện, mác bê tông, lớp bảo vệ, khối lượng bê tông, khối lượng cốt thép tổng hợp
+  - group: I. MÔ HÌNH KẾT CẤU MÓNG VÀ KHUNG BÊ TÔNG CỐT THÉP
+    element: Cột, dầm BTCT đỡ mái
+    lod: '350'
+    info: Mã cấu kiện, tiết diện, mác bê tông, chi tiết liên kết với gối giàn (bản mã, bu lông neo)
+  - group: II. MÔ HÌNH KẾT CẤU THÉP MÁI VÒM
+    element: Thanh giàn không gian
+    lod: '350'
+    info: Mã thanh, tiết diện ống, mác thép, chiều dài, nút đầu – nút cuối, khối lượng, hệ sơn, phân đoạn lắp dựng
+  - group: II. MÔ HÌNH KẾT CẤU THÉP MÁI VÒM
+    element: Nút cầu, gối giàn
+    lod: '350'
+    info: Mã nút, đường kính cầu, số lỗ ren, mác thép, loại gối, tọa độ nút
+  - group: II. MÔ HÌNH KẾT CẤU THÉP MÁI VÒM
+    element: Tôn mái, tôn lấy sáng, nẹp diềm, xà gồ
+    lod: '350'
+    info: Chủng loại, chiều dày, lớp mạ/màu, diện tích, phương thức liên kết
+  - group: II. MÔ HÌNH KẾT CẤU THÉP MÁI VÒM
+    element: Bọc chống cháy kết cấu thép
+    lod: '300'
+    info: Loại vật liệu, chiều dày, giới hạn chịu lửa, phạm vi cao độ áp dụng
+  - group: III. MÔ HÌNH XÂY DỰNG, THOÁT NƯỚC
+    element: Tường chắn than, mương thoát nước nhiễm than, máng thoát nước mái
+    lod: '350'
+    info: Mã cấu kiện, vật liệu, độ dốc, cao độ đáy, khối lượng
+  - group: IV. MÔ HÌNH ĐIỆN, PHÒNG CHÁY CHỮA CHÁY
+    element: Đèn chiếu sáng, tủ điện, máng/tuyến cáp
+    lod: '350'
+    info: Mã thiết bị, công suất, cấp bảo vệ, mạch cấp, vị trí lắp đặt
+  - group: IV. MÔ HÌNH ĐIỆN, PHÒNG CHÁY CHỮA CHÁY
+    element: Nối đất, chống quá điện áp
+    lod: '300'
+    info: Vật liệu, tiết diện dây, vị trí kết nối lưới hiện hữu
+  - group: IV. MÔ HÌNH ĐIỆN, PHÒNG CHÁY CHỮA CHÁY
+    element: Đường ống, thiết bị chữa cháy bổ sung
+    lod: '350'
+    info: Đường kính, vật liệu, áp lực làm việc, mã thiết bị
+  - group: V. MÔ HÌNH HIỆN TRẠNG VÀ MẶT BẰNG THI CÔNG
+    element: Hạng mục hiện hữu (móng, cọc, tường, mương, mái vòm)
+    lod: 200–300
+    info: Số hiệu bản vẽ hoàn công nguồn, cao độ, trạng thái (giữ lại/tháo dỡ/hoàn trả)
+  - group: V. MÔ HÌNH HIỆN TRẠNG VÀ MẶT BẰNG THI CÔNG
+    element: Khối bao thiết bị vận hành (máy đánh phá đống, băng tải)
+    lod: '200'
+    info: Thiết bị, phạm vi hoạt động, khoảng tĩnh không yêu cầu
+  - group: V. MÔ HÌNH HIỆN TRẠNG VÀ MẶT BẰNG THI CÔNG
+    element: Mặt bằng tổ chức thi công, cẩu, bãi tập kết
+    lod: '200'
+    info: Giai đoạn sử dụng, tải trọng, bán kính làm việc của cẩu
+  params:
+  - name: DH3_MaCauKien
+    kind: Text
+    scope: Instance
+    applies: Mọi cấu kiện
+    description: Mã định danh cấu kiện, thống nhất với bản vẽ TKBVTC
+  - name: DH3_HangMuc
+    kind: Text
+    scope: Instance
+    applies: Mọi cấu kiện
+    description: Hạng mục theo bảng phân chia mô hình
+  - name: DH3_DotTKBVTC
+    kind: Text
+    scope: Instance
+    applies: Mọi cấu kiện
+    description: Đợt TKBVTC phát hành cấu kiện
+  - name: DH3_PhanDoanThiCong
+    kind: Text
+    scope: Instance
+    applies: Cấu kiện xây dựng mới
+    description: Phân đoạn thi công, dùng liên kết tiến độ 4D
+  - name: DH3_TrangThai
+    kind: Text
+    scope: Instance
+    applies: Hạng mục hiện hữu
+    description: Giữ lại / Tháo dỡ / Hoàn trả
+  - name: DH3_VatLieu
+    kind: Text
+    scope: Type
+    applies: Mọi cấu kiện
+    description: Mác bê tông, mác thép hoặc chủng loại vật liệu
+  - name: DH3_KhoiLuong
+    kind: Number
+    scope: Instance
+    applies: Cấu kiện bóc khối lượng
+    description: Khối lượng theo đơn vị tính của cấu kiện
+  - name: DH3_BanVeNguon
+    kind: Text
+    scope: Instance
+    applies: Hạng mục hiện hữu
+    description: Số hiệu bản vẽ hoàn công làm nguồn dựng hình
+cde:
+  name: CDE của dự án
+  provider: Tư vấn giám sát (gói thầu 02TV-DH3MR)
+  intro: Theo Quyết định phê duyệt kế hoạch lựa chọn nhà thầu và mục III.3 Chương V E-HSMT, hệ thống CDE của dự
+    án do Tư vấn giám sát (gói thầu 02TV-DH3MR) cung cấp và duy trì từ lúc khởi công đến lúc bàn giao; Nhà thầu
+    ứng dụng, cập nhật mô hình BIM thi công, hoàn công và khai thác, lưu trữ dữ liệu trên hệ thống CDE đó. Trong
+    thời gian CDE của dự án chưa sẵn sàng, Nhà thầu sử dụng nền tảng vCDE do PECC2 phát triển và vận hành làm môi
+    trường làm việc tạm thời, tổ chức theo cùng cấu trúc thư mục và trạng thái, và chuyển toàn bộ dữ liệu sang CDE
+    của dự án khi được bàn giao «cần thống nhất với Chủ đầu tư, Tư vấn giám sát tại cuộc họp khởi động». Hồ sơ ở
+    trạng thái Phát hành được trình nộp chính thức qua hệ thống quản lý hồ sơ trực tuyến của Chủ đầu tư (file gốc
+    và file PDF); nhật ký thi công và biên bản nghiệm thu điện tử thực hiện trên IMIS 2.0 theo mục III.4 Chương
+    V E-HSMT.
+  size_limit: ''
+  modules:
+  - name: Quản lý tài liệu
+    purpose: Lưu trữ, kiểm soát phiên bản mô hình, bản vẽ TKBVTC, hồ sơ hoàn công theo cấu trúc thư mục và 4 vùng
+      trạng thái CDE
+  - name: Xem xét (Review)
+    purpose: Rà soát nội bộ Nhà thầu (bộ môn – Điều phối BIM – Quản lý BIM) trước khi chia sẻ cho Tư vấn giám sát
+  - name: Trình duyệt (Submittal)
+    purpose: Trình mô hình và hồ sơ TKBVTC từng đợt để Tư vấn giám sát kiểm tra, Chủ đầu tư xem xét; theo dõi kết
+      quả phê duyệt
+  - name: Phân phối tài liệu (Transmittal)
+    purpose: Phát hành chính thức mô hình, hồ sơ đã phê duyệt tới Chủ đầu tư, Tư vấn giám sát, các thành viên liên
+      danh và hiện trường
+  - name: Mô hình BIM
+    purpose: Xem mô hình IFC, mô hình tổng hợp trực tiếp trên trình duyệt phục vụ họp điều phối và tra cứu tại hiện
+      trường
+  - name: Vấn đề và cộng tác
+    purpose: Quản lý xung đột, RFI, RFC, ý kiến của Tư vấn giám sát và vấn đề hiện trường gắn vị trí 3D
+  - name: Bảng điều khiển
+    purpose: Theo dõi tiến độ chuyển giao theo MIDP/TIDP, tình trạng xử lý vấn đề và trạng thái phê duyệt từng đợt
+      TKBVTC
+  status_codes:
+  - code: WIP
+    name: Đang thực hiện
+    zone: WIP
+    meaning: Thông tin đang được nhóm tác giả tạo lập, chưa chia sẻ
+  - code: S1
+    name: Phối hợp
+    zone: SHARED
+    meaning: Chia sẻ để các bộ môn phối hợp
+  - code: S2
+    name: Thông tin tham khảo
+    zone: SHARED
+    meaning: Chia sẻ để tham khảo
+  - code: S3
+    name: Xem xét, góp ý
+    zone: SHARED
+    meaning: Chia sẻ để xem xét và cho ý kiến
+  - code: S4
+    name: Trình phê duyệt
+    zone: SHARED
+    meaning: Trình Chủ đầu tư xem xét chấp thuận
+  - code: A1
+    name: Chấp thuận
+    zone: PUBLISHED
+    meaning: Được chấp thuận phát hành
+  - code: B1
+    name: Chấp thuận có ý kiến
+    zone: PUBLISHED
+    meaning: Chấp thuận kèm ý kiến cần cập nhật ở phiên bản sau
+  - code: CR
+    name: Hoàn công
+    zone: PUBLISHED
+    meaning: Thông tin hoàn công
+  - code: AR
+    name: Lưu trữ
+    zone: ARCHIVED
+    meaning: Phiên bản đã thay thế hoặc lưu trữ theo mốc
+  folders:
+  - level1: 01_WIP
+    level2: 00_QuanLyBIM
+    content: BEP, MIDP/TIDP, báo cáo BIM đang soạn thảo
+    suit: WIP
+  - level1: 01_WIP
+    level2: 01_STR_KetCau
+    content: Mô hình kết cấu đang dựng (hiện trạng, móng, khung, giàn)
+    suit: WIP
+  - level1: 01_WIP
+    level2: 02_ARC_KienTruc
+    content: Mô hình tôn mái, bao che, chống cháy đang dựng
+    suit: WIP
+  - level1: 01_WIP
+    level2: 03_AST_XayDung
+    content: Mô hình tường chắn than, mương, thoát nước đang dựng
+    suit: WIP
+  - level1: 01_WIP
+    level2: 04_ELC_Dien
+    content: Mô hình điện đang dựng
+    suit: WIP
+  - level1: 01_WIP
+    level2: 05_MEC_PCCC
+    content: Mô hình chữa cháy đang dựng
+    suit: WIP
+  - level1: 01_WIP
+    level2: 06_ALL_PhoiHop
+    content: Mô hình tổng hợp, mô hình 4D đang phối hợp
+    suit: WIP
+  - level1: 02_SHARED
+    level2: 00_TaiNguyen
+    content: Tệp mẫu, tham số dùng chung, thư viện family, quy ước màu
+    suit: S2
+  - level1: 02_SHARED
+    level2: 01_DuLieuDauVao
+    content: Mô hình BCNCKT/TKCS, bản vẽ TKCS, hồ sơ hoàn công hiện hữu, biên bản tiếp nhận
+    suit: S2
+  - level1: 02_SHARED
+    level2: 02_MoHinh
+    content: Mô hình bộ môn và mô hình tổng hợp chia sẻ để Tư vấn giám sát kiểm tra
+    suit: S1–S3
+  - level1: 02_SHARED
+    level2: 03_XungDot
+    content: Báo cáo xung đột của Nhà thầu và của Tư vấn giám sát
+    suit: S3
+  - level1: 02_SHARED
+    level2: 04_TrinhDuyet
+    content: Hồ sơ trình theo đợt (<YYMMDD>_<Đợt>)
+    suit: S4
+  - level1: 02_SHARED
+    level2: 05_RFI_RFC
+    content: Yêu cầu cung cấp thông tin, yêu cầu thay đổi
+    suit: S3
+  - level1: 03_PUBLISHED
+    level2: 01_KeHoachBIM
+    content: BEP và phụ lục đã được chấp thuận
+    suit: A1/B1
+  - level1: 03_PUBLISHED
+    level2: 02_TKBVTC_Dot<n>
+    content: Tập 6 – Thiết kế BIM của từng đợt TKBVTC đã phê duyệt
+    suit: A1/B1
+  - level1: 03_PUBLISHED
+    level2: 03_ThiCong
+    content: Mô phỏng 4D, báo cáo kết quả BIM theo đợt nghiệm thu
+    suit: A1/B1
+  - level1: 03_PUBLISHED
+    level2: 04_HoanCong
+    content: Mô hình hoàn công, báo cáo lưu trữ dữ liệu BIM
+    suit: CR
+  - level1: 04_ARCHIVED
+    level2: 01_MocChuyenGiao
+    content: Gói dữ liệu theo từng mốc chuyển giao
+    suit: AR
+  - level1: 04_ARCHIVED
+    level2: 02_PhienBanThayThe
+    content: Phiên bản đã bị thay thế
+    suit: AR
+  perm_roles: CĐT;TVGS;GĐDA;QLB;CDE;ĐPB;TNB;KTV;VH
+  perms:
+  - folder: 01_WIP/00_QuanLyBIM
+    values: –;–;V;ED;AD;ED;V;V;–
+  - folder: 01_WIP/<bộ môn>
+    values: –;–;V;ED;AD;ED;ED;UP;–
+  - folder: 01_WIP/06_ALL_PhoiHop
+    values: –;–;V;ED;AD;ED;DL;DL;–
+  - folder: 02_SHARED
+    values: CM;CM;CM;ED;AD;ED;UP;DL;V
+  - folder: 02_SHARED/04_TrinhDuyet
+    values: CM;CM;CM;ED;AD;UP;V;V;–
+  - folder: 03_PUBLISHED
+    values: DL;DL;DL;ED;AD;DL;DL;DL;DL
+  - folder: 04_ARCHIVED
+    values: V;V;V;V;AD;V;V;V;–
+  transitions:
+  - change: WIP → SHARED (S1)
+    condition: Đạt kiểm tra Lớp 1, Lớp 2 và không còn xung đột mức Nghiêm trọng
+    by: Quản lý BIM
+    function: Quản lý tài liệu
+  - change: S1 → S3
+    condition: Đạt kiểm tra Lớp 3; gửi Tư vấn giám sát kiểm tra độc lập
+    by: Quản lý BIM
+    function: Xem xét (Review)
+  - change: S3 → S4
+    condition: Tư vấn giám sát không còn ý kiến về xung đột, sai sót thiết kế
+    by: Quản lý BIM
+    function: Trình duyệt (Submittal)
+  - change: S4 → A1/B1
+    condition: Chủ đầu tư phê duyệt hồ sơ TKBVTC của đợt
+    by: Quản lý CDE
+    function: Phân phối tài liệu (Transmittal)
+  - change: → CR
+    condition: Mô hình hoàn công được nghiệm thu
+    by: Quản lý CDE
+    function: Phân phối tài liệu (Transmittal)
+  - change: → AR
+    condition: Kết thúc mốc chuyển giao hoặc có phiên bản thay thế
+    by: Quản lý CDE
+    function: Quản lý tài liệu
+delivery:
+  it: Nhóm BIM của Nhà thầu sử dụng máy trạm cấu hình đồ họa phù hợp Revit 2024 và Navisworks, kết nối Internet
+    tốc độ cao tại văn phòng PECC2 và văn phòng công trường; thiết bị di động (máy tính bảng) cho BIM hiện trường.
+    Nhà thầu bố trí phần cứng, phần mềm và kết nối để làm việc với CDE của dự án, hệ thống quản lý hồ sơ trực tuyến
+    và IMIS 2.0 của Chủ đầu tư theo mục III.4 Chương V E-HSMT.
+  formats:
+  - 'Mô hình BIM – định dạng trao đổi: *.ifc, *.nwc, *.nwd'
+  - 'Mô hình tổng hợp từng đợt TKBVTC và mô hình hoàn công: *.ifc, *.nwd'
+  - 'Định dạng gốc: *.rvt (Revit 2024) đối với các mô hình kết cấu, kiến trúc, cơ, điện; định dạng gốc được lưu
+    trữ trên CDE và cung cấp cho Chủ đầu tư'
+  deliverables:
+  - name: Kế hoạch thực hiện BIM (BEP) và các phụ lục, MIDP
+    format: '*.docx, *.pdf'
+    milestone: T0 + 14 ngày
+  - name: Mô hình hiện trạng và biên bản tiếp nhận dữ liệu đầu vào
+    format: '*.rvt, *.ifc, *.nwd'
+    milestone: T0 + 07 ngày
+  - name: Mô hình TKBVTC theo đợt, bản vẽ trích xuất, báo cáo kiểm tra xung đột (Tập 6 – Thiết kế BIM)
+    format: '*.rvt, *.ifc, *.nwd, *.pdf'
+    milestone: 'Cùng hồ sơ TKBVTC mỗi đợt (đợt 1: T0 + 30 ngày)'
+  - name: Mô phỏng tiến độ 4D, mô phỏng biện pháp lắp dựng giàn
+    format: '*.nwd, *.mp4'
+    milestone: Trước khi lắp dựng giàn; cập nhật theo tiến độ
+  - name: Báo cáo kết quả thực hiện BIM phục vụ nghiệm thu khối lượng
+    format: '*.pdf, *.xlsx'
+    milestone: Theo từng đợt nghiệm thu thi công
+  - name: Mô hình hoàn công, bản vẽ hoàn công
+    format: '*.rvt, *.ifc, *.pdf'
+    milestone: Trước nghiệm thu hoàn thành (31/3/2027)
+  - name: Báo cáo lưu trữ dữ liệu BIM phục vụ chuyển giao cho đơn vị vận hành
+    format: '*.pdf, *.xlsx, *.ifc'
+    milestone: Cùng hồ sơ hoàn thành công trình
+  review_products: 'Sản phẩm BIM trình kèm hồ sơ TKBVTC mỗi đợt (Tập 6 – Thiết kế BIM) gồm: các mô hình bộ môn của
+    đợt (*.rvt, *.ifc); mô hình tổng hợp (*.nwd) và báo cáo kiểm tra xung đột, tình trạng xử lý; bảng khối lượng
+    bóc tách từ mô hình; Báo cáo mô hình thông tin công trình BIM của đợt. Thời gian thực hiện sản phẩm BIM không
+    bao gồm thời gian xem xét, thẩm tra, phê duyệt của Chủ đầu tư và Tư vấn giám sát. Nhiệm vụ kỹ thuật quy định
+    hồ sơ TKBVTC đợt 1 – ấn bản 1 trong 15 ngày kể từ ngày hợp đồng có hiệu lực, trong khi mốc T1 tại Chương V E-HSMT
+    là T0 + 30 ngày cho cả lập, thẩm tra, thẩm định và phê duyệt; kế hoạch này lấy theo mốc T1 «cần Chủ đầu tư xác
+    nhận».'
+  rounds:
+  - name: TKBVTC đợt 1 (cọc, móng)
+    date: T0 + 30 ngày
+  - name: TKBVTC đợt 2 (khung, giàn mái, tôn mái)
+    date: «…»
+  - name: TKBVTC đợt 3 (thoát nước, điện, PCCC)
+    date: «…»
+  - name: Hoàn công
+    date: 31/3/2027
+  midp:
+  - group: KẾ HOẠCH BIM
+    file: DH3MR.KT-PECC2-PR-ALL-0001
+    description: Kế hoạch thực hiện BIM (BEP) và các phụ lục – nộp T0 + 14 ngày
+    native: docx
+    exchange: pdf
+    lead: PECC2
+    dates: x;cập nhật;cập nhật;–
+  - group: MÔ HÌNH BIM
+    file: DH3MR.KT-PECC2-M3-STR_HT
+    description: Mô hình hiện trạng – nộp T0 + 07 ngày
+    native: rvt
+    exchange: ifc, nwd
+    lead: PECC2
+    dates: x;cập nhật;cập nhật;x
+  - group: MÔ HÌNH BIM
+    file: DH3MR.KT-PECC2-M3-STR_MONG
+    description: Cọc, đài, giằng móng
+    native: rvt
+    exchange: ifc, nwc
+    lead: PECC2
+    dates: x;–;–;x
+  - group: MÔ HÌNH BIM
+    file: DH3MR.KT-PECC2-M3-STR_KHUNG
+    description: Khung cột – dầm BTCT đỡ mái
+    native: rvt
+    exchange: ifc, nwc
+    lead: PECC2
+    dates: –;x;–;x
+  - group: MÔ HÌNH BIM
+    file: DH3MR.KT-PECC2-M3-STR_GIAN
+    description: Giàn không gian mái vòm
+    native: rvt
+    exchange: ifc, nwc
+    lead: PECC2
+    dates: –;x;–;x
+  - group: MÔ HÌNH BIM
+    file: DH3MR.KT-PECC2-M3-ARC_MAI
+    description: Tôn mái, tôn lấy sáng, nẹp diềm, bọc chống cháy
+    native: rvt
+    exchange: ifc, nwc
+    lead: PECC2
+    dates: –;x;–;x
+  - group: MÔ HÌNH BIM
+    file: DH3MR.KT-PECC2-M3-AST
+    description: Tường chắn than, mương, thoát nước mái
+    native: rvt
+    exchange: ifc, nwc
+    lead: PECC2
+    dates: –;–;x;x
+  - group: MÔ HÌNH BIM
+    file: DH3MR.KT-PECC2-M3-ELC
+    description: Chiếu sáng, tủ điện, tuyến cáp, nối đất
+    native: rvt
+    exchange: ifc, nwc
+    lead: PECC2
+    dates: –;–;x;x
+  - group: MÔ HÌNH BIM
+    file: DH3MR.KT-PECC2-M3-MEC
+    description: Hệ thống chữa cháy bổ sung
+    native: rvt
+    exchange: ifc, nwc
+    lead: PECC2
+    dates: –;–;x;x
+  - group: MÔ HÌNH BIM
+    file: DH3MR.KT-PECC2-M3-ALL_TC
+    description: Mặt bằng tổ chức thi công (phục vụ 4D)
+    native: rvt
+    exchange: nwc
+    lead: PECC2
+    dates: –;x;cập nhật;–
+  - group: MÔ HÌNH BIM
+    file: DH3MR.KT-PECC2-CM-ALL
+    description: Mô hình tổng hợp
+    native: nwf
+    exchange: nwd, ifc
+    lead: PECC2
+    dates: x;x;x;x
+  - group: BÁO CÁO
+    file: DH3MR.KT-PECC2-CR-ALL-0001
+    description: Báo cáo kiểm tra xung đột theo đợt
+    native: docx
+    exchange: pdf
+    lead: PECC2
+    dates: x;x;x;–
+  - group: BÁO CÁO
+    file: DH3MR.KT-PECC2-RP-ALL-0001
+    description: Báo cáo mô hình thông tin công trình BIM theo đợt
+    native: docx
+    exchange: pdf
+    lead: PECC2
+    dates: x;x;x;–
+  - group: BÁO CÁO
+    file: DH3MR.KT-PECC2-VS-ALL-0001
+    description: Mô phỏng tiến độ 4D và biện pháp lắp dựng giàn
+    native: nwf
+    exchange: nwd, mp4
+    lead: PECC2
+    dates: –;x;cập nhật;–
+  - group: BÁO CÁO
+    file: DH3MR.KT-PECC2-RP-ALL-0002
+    description: Báo cáo kết quả thực hiện BIM phục vụ nghiệm thu khối lượng
+    native: docx, xlsx
+    exchange: pdf, xlsx
+    lead: PECC2
+    dates: theo đợt nghiệm thu;;;
+  - group: BÁO CÁO
+    file: DH3MR.KT-PECC2-RP-ALL-0003
+    description: Báo cáo lưu trữ dữ liệu BIM phục vụ chuyển giao cho đơn vị vận hành
+    native: docx, xlsx
+    exchange: pdf, xlsx, ifc
+    lead: PECC2
+    dates: –;–;–;x
+  tidp:
+  - team: A. QUẢN LÝ BIM, ĐIỀU PHỐI
+    task: Hoàn thiện BEP, phụ lục, MIDP/TIDP
+    product: DH3MR.KT-PECC2-PR-ALL-0001
+    person: Quản lý BIM
+    inputs: Chương V E-HSMT, NVKT, BEP sơ bộ
+    start: T0
+    finish: T0 + 14 ngày
+    note: Trình Chủ đầu tư chấp thuận trước khi mô hình hóa
+  - team: A. QUẢN LÝ BIM, ĐIỀU PHỐI
+    task: Tiếp nhận dữ liệu đầu vào, kiểm tra tọa độ, cao độ; lập biên bản
+    product: Biên bản tiếp nhận
+    person: Điều phối BIM
+    inputs: Mô hình PECC3, bản vẽ TKCS, hồ sơ hoàn công
+    start: T0
+    finish: T0 + 07 ngày
+    note: ''
+  - team: A. QUẢN LÝ BIM, ĐIỀU PHỐI
+    task: Thiết lập tệp mẫu Revit 2024, điểm gốc, tham số dùng chung, quy ước màu
+    product: Tệp mẫu dự án
+    person: Điều phối BIM
+    inputs: Mô hình PECC3
+    start: T0
+    finish: T0 + 07 ngày
+    note: Chặn toàn bộ công tác dựng hình
+  - team: A. QUẢN LÝ BIM, ĐIỀU PHỐI
+    task: Tích hợp mô hình tổng hợp, kiểm tra xung đột, báo cáo
+    product: DH3MR.KT-PECC2-CM-ALL; DH3MR.KT-PECC2-CR-ALL-0001
+    person: Điều phối BIM
+    inputs: Mô hình bộ môn của đợt
+    start: Hằng tuần trong đợt
+    finish: Trước khi chia sẻ đợt
+    note: ''
+  - team: B. NHÓM BIM KẾT CẤU
+    task: Dựng mô hình hiện trạng
+    product: DH3MR.KT-PECC2-M3-STR_HT
+    person: Trưởng nhóm BIM – Kết cấu
+    inputs: Hồ sơ hoàn công kho than hiện hữu
+    start: T0
+    finish: T0 + 07 ngày
+    note: ''
+  - team: B. NHÓM BIM KẾT CẤU
+    task: Dựng mô hình cọc, đài, giằng (đợt 1)
+    product: DH3MR.KT-PECC2-M3-STR_MONG
+    person: Trưởng nhóm BIM – Kết cấu
+    inputs: Khảo sát địa chất, tính toán móng
+    start: T0 + 07 ngày
+    finish: T0 + 30 ngày
+    note: Ưu tiên để kịp khởi công phần cọc
+  - team: B. NHÓM BIM KẾT CẤU
+    task: Dựng mô hình khung BTCT, giàn không gian (đợt 2)
+    product: DH3MR.KT-PECC2-M3-STR_KHUNG; DH3MR.KT-PECC2-M3-STR_GIAN
+    person: Trưởng nhóm BIM – Kết cấu
+    inputs: Mô hình tính toán giàn, bản vẽ gia công
+    start: Sau phê duyệt đợt 1
+    finish: 10 ngày/đợt
+    note: ''
+  - team: C. NHÓM BIM XÂY DỰNG, KIẾN TRÚC
+    task: Dựng mô hình tôn mái, bao che, chống cháy (đợt 2)
+    product: DH3MR.KT-PECC2-M3-ARC_MAI
+    person: Trưởng nhóm BIM – Xây dựng
+    inputs: Mô hình giàn
+    start: Sau phê duyệt đợt 1
+    finish: 10 ngày/đợt
+    note: ''
+  - team: C. NHÓM BIM XÂY DỰNG, KIẾN TRÚC
+    task: Dựng mô hình tường chắn than, mương, thoát nước mái (đợt 3)
+    product: DH3MR.KT-PECC2-M3-AST
+    person: Trưởng nhóm BIM – Xây dựng
+    inputs: Mô hình hiện trạng, mô hình mái
+    start: Sau phê duyệt đợt 2
+    finish: 10 ngày/đợt
+    note: ''
+  - team: D. NHÓM BIM ĐIỆN, PCCC
+    task: Dựng mô hình điện chiếu sáng, nối đất (đợt 3)
+    product: DH3MR.KT-PECC2-M3-ELC
+    person: Trưởng nhóm BIM – Điện
+    inputs: Mô hình giàn, khung
+    start: Sau phê duyệt đợt 2
+    finish: 10 ngày/đợt
+    note: ''
+  - team: D. NHÓM BIM ĐIỆN, PCCC
+    task: Dựng mô hình chữa cháy bổ sung (đợt 3)
+    product: DH3MR.KT-PECC2-M3-MEC
+    person: Trưởng nhóm BIM – Công nghệ
+    inputs: Ý kiến PCCC, mô hình giàn
+    start: Sau phê duyệt đợt 2
+    finish: 10 ngày/đợt
+    note: ''
+  - team: E. BIM THI CÔNG, HOÀN CÔNG
+    task: Mô phỏng 4D và biện pháp lắp dựng giàn
+    product: DH3MR.KT-PECC2-M3-ALL_TC; DH3MR.KT-PECC2-VS-ALL-0001
+    person: Điều phối BIM
+    inputs: Tiến độ thi công được duyệt, mô hình giàn
+    start: Sau phê duyệt mô hình giàn
+    finish: 10 ngày
+    note: ''
+  - team: E. BIM THI CÔNG, HOÀN CÔNG
+    task: Báo cáo kết quả BIM phục vụ nghiệm thu khối lượng
+    product: DH3MR.KT-PECC2-RP-ALL-0002
+    person: Quản lý BIM
+    inputs: Mô hình đã phát hành, khối lượng thi công
+    start: T1
+    finish: Theo đợt nghiệm thu
+    note: ''
+  - team: E. BIM THI CÔNG, HOÀN CÔNG
+    task: Mô hình hoàn công, báo cáo lưu trữ dữ liệu BIM
+    product: DH3MR.KT-PECC2-RP-ALL-0003
+    person: Quản lý BIM
+    inputs: Bản vẽ hoàn công
+    start: T4
+    finish: T4 + 15 ngày
+    note: Hoàn thành trước 31/3/2027
+  report_outline:
+  - 1. PHẦN BÁO CÁO
+  - 1.1 Thông tin chung về dự án
+  - 1.2 Mục tiêu và các ứng dụng BIM của dự án
+  - 1.3 Phạm vi công việc thực hiện
+  - 1.4 Tiêu chuẩn áp dụng
+  - 1.5 Môi trường dữ liệu chung
+  - 1.6 Khối lượng công việc đã thực hiện; bảng khối lượng bóc tách từ mô hình
+  - 1.7 Nhân sự tham gia thực hiện
+  - 1.8 Kế hoạch và tiến độ thực hiện BIM
+  - 1.9 Kết quả kiểm tra xung đột và các vấn đề phát sinh (nếu có)
+  - 2. PHẦN ĐÁNH GIÁ
+  - 2.1 Đánh giá chung về khối lượng công việc
+  - 2.2 Đánh giá về chất lượng triển khai các ứng dụng BIM
+  - 2.3 Đánh giá về tiến độ thực hiện
+  - '2.4 Các vấn đề khác: điều kiện thuận lợi, khó khăn, các vấn đề tồn tại'
+  - 3. PHẦN KẾT LUẬN VÀ KIẾN NGHỊ
+  - 3.1 Kết luận về quá trình ứng dụng BIM tại dự án
+  - 3.2 Kiến nghị
+coordination:
+  process_image: ''
+  checks:
+  - name: Kiểm tra trực quan mô hình bộ môn
+    description: Quan sát mô hình, đối chiếu với bản vẽ và số liệu thiết kế của bộ môn
+    responsible: Các bộ môn
+    software: Revit
+    frequency: Thường xuyên
+  - name: Kiểm tra tuân thủ quy định của BEP
+    description: Quy tắc đặt tên, hệ tọa độ, mức độ LOD, tham số bắt buộc
+    responsible: Trưởng nhóm BIM bộ môn
+    software: Revit, Navisworks
+    frequency: Trước mỗi lần chia sẻ
+  - name: Kiểm tra xung đột
+    description: Chạy kiểm tra theo ma trận xung đột trên mô hình tổng hợp gồm mô hình bộ môn và mô hình hiện trạng
+    responsible: Điều phối BIM
+    software: Navisworks Manage
+    frequency: Hằng tuần trong đợt
+  - name: Kiểm tra IFC xuất ra
+    description: Đủ đối tượng, đúng lớp IFC, đủ thuộc tính
+    responsible: Điều phối BIM
+    software: Công cụ kiểm tra IFC
+    frequency: Trước mỗi lần phát hành
+  - name: Kiểm tra độc lập
+    description: Kiểm tra xung đột trên mô hình đã chia sẻ, lập báo cáo xung đột và sai sót thiết kế
+    responsible: Tư vấn giám sát
+    software: Theo lựa chọn của Tư vấn giám sát
+    frequency: Mỗi đợt TKBVTC
+  - name: Phối hợp và ghi nhận vấn đề trên CDE
+    description: Sử dụng chức năng quản lý vấn đề, RFI, RFC để trao đổi và theo dõi xử lý
+    responsible: Các bên tham gia
+    software: CDE
+    frequency: Thường xuyên
+  clashes:
+  - pair: Cọc mới – cọc, đài móng kho than và móng tường chắn gió hiện hữu
+    kind: Cứng; khoảng cách tối thiểu
+    tolerance: «…»
+    responsible: Điều phối BIM, nhóm Kết cấu
+    frequency: Mỗi lần cập nhật mô hình đợt 1
+  - pair: Đài, giằng móng mới – mương thoát nước, tường chắn than hiện hữu; phạm vi tháo dỡ – hoàn trả
+    kind: Cứng
+    tolerance: «…»
+    responsible: Điều phối BIM, nhóm Kết cấu – Xây dựng
+    frequency: Hằng tuần trong đợt
+  - pair: Giàn mới – mái vòm hiện hữu (hình học, cao độ, khe nhiệt, che chắn, thoát nước tại vị trí nối tiếp)
+    kind: Cứng; khoảng hở
+    tolerance: «…»
+    responsible: Điều phối BIM, nhóm Kết cấu – Kiến trúc
+    frequency: Hằng tuần trong đợt giàn mái
+  - pair: Giàn, khung – khối bao hoạt động máy đánh phá đống và băng tải
+    kind: Mềm (tĩnh không)
+    tolerance: «…»
+    responsible: Điều phối BIM
+    frequency: Mỗi lần cập nhật giàn, khung
+  - pair: Đèn, máng cáp, tủ điện, đường ống chữa cháy – thanh, nút giàn và khung BTCT; khả năng tiếp cận bảo trì
+    kind: Cứng; mềm
+    tolerance: «…»
+    responsible: Điều phối BIM, nhóm Điện – PCCC
+    frequency: Hằng tuần trong đợt hệ thống
+  - pair: Vùng hoạt động cẩu, bãi tập kết, giàn giáo bảo vệ băng tải – công trình hiện hữu và thiết bị đang vận
+      hành
+    kind: Trình tự (4D)
+    tolerance: —
+    responsible: Nhóm BIM thi công
+    frequency: Trước mỗi giai đoạn thi công chính
+  - pair: Kiểm tra độc lập trên mô hình đã chia sẻ
+    kind: Tất cả
+    tolerance: Theo ma trận này
+    responsible: Tư vấn giám sát
+    frequency: Mỗi đợt TKBVTC
+  software:
+  - use: Mô hình kết cấu, kiến trúc, điện, PCCC
+    responsible: PECC2
+    software: Autodesk Revit 2024
+    native: RVT
+    exchange: IFC, DWG, PDF
+  - use: Mô hình tổng hợp, kiểm tra xung đột, 4D
+    responsible: PECC2
+    software: Autodesk Navisworks Manage 2024
+    native: NWF
+    exchange: NWD, MP4
+  - use: Tiến độ thi công
+    responsible: PECC2
+    software: Microsoft Project / Primavera P6 «theo tiến độ được duyệt»
+    native: MPP, XER
+    exchange: CSV, XML
+  - use: Bóc tách khối lượng
+    responsible: PECC2
+    software: Revit 2024 (Schedule), Microsoft Excel
+    native: RVT
+    exchange: XLSX
+  - use: BIM hiện trường
+    responsible: PECC2
+    software: Dalux Field / Autodesk Build / OpenSpace «chọn một»
+    native: —
+    exchange: PDF, XLSX
+  - use: Bản vẽ 2D
+    responsible: PECC2
+    software: AutoCAD 2024
+    native: DWG
+    exchange: PDF
+  - use: Môi trường dữ liệu chung
+    responsible: Tư vấn giám sát
+    software: CDE của dự án «tên nền tảng»
+    native: —
+    exchange: IFC, PDF
+  units: hệ thống đo lường quốc tế SI; đơn vị độ dài trong mô hình là milimét (mm), cao độ thể hiện theo mét (m)
+    trên bản vẽ
+  coord_system: hệ tọa độ quốc gia VN-2000, kinh tuyến trục và múi chiếu theo hồ sơ TKCS; hệ cao độ theo hồ sơ khảo
+    sát của dự án; mọi mô hình bộ môn liên kết theo hệ tọa độ chia sẻ (Shared Coordinates)
+  coord_params: kinh tuyến trục «…», múi chiếu «…»; điểm gốc dùng chung (Survey Point, Project Base Point) đặt trùng
+    với mô hình BCNCKT/TKCS của Chủ đầu tư, tọa độ (X = «…»; Y = «…»); hệ lưới trục kho than mở rộng nối tiếp lưới
+    trục kho hiện hữu.
+  exchange_extra:
+  - Mô hình nộp Chủ đầu tư, Tư vấn giám sát và cơ quan chuyên môn ở định dạng mở IFC theo khoản 3 Điều 8 Nghị định
+    số 217/2026/NĐ-CP, kèm định dạng gốc khi được yêu cầu
+  - Hồ sơ trình nộp chính thức gồm file gốc và file PDF, gửi qua hệ thống quản lý hồ sơ trực tuyến của Chủ đầu tư
+  - Quy ước gán màu cho các hệ thống trong mô hình được thống nhất với Tư vấn giám sát trước khi dựng hình
+  qc:
+  - group: LỚP 1 – TỰ KIỂM (Kỹ thuật viên BIM)
+    ref: A1
+    item: Tên tệp đúng quy tắc đặt tên; tệp dựng từ tệp mẫu của dự án, đúng phiên bản Revit 2024
+  - group: LỚP 1 – TỰ KIỂM (Kỹ thuật viên BIM)
+    ref: A2
+    item: Đủ cấu kiện theo phạm vi được giao của đợt
+  - group: LỚP 1 – TỰ KIỂM (Kỹ thuật viên BIM)
+    ref: A3
+    item: Tên family, type, vật liệu đúng quy ước
+  - group: LỚP 1 – TỰ KIỂM (Kỹ thuật viên BIM)
+    ref: A4
+    item: Không còn cảnh báo nghiêm trọng, đối tượng trùng lặp, đối tượng dựng tại chỗ không cần thiết
+  - group: LỚP 1 – TỰ KIỂM (Kỹ thuật viên BIM)
+    ref: A5
+    item: Đã dọn các view, liên kết, nhóm không sử dụng
+  - group: LỚP 2 – KIỂM TRA BỘ MÔN (Trưởng nhóm BIM bộ môn)
+    ref: B1
+    item: Hệ tọa độ chia sẻ, điểm gốc, cao độ, lưới trục trùng với tệp mẫu
+  - group: LỚP 2 – KIỂM TRA BỘ MÔN (Trưởng nhóm BIM bộ môn)
+    ref: B2
+    item: Hình học đạt mức LOD quy định cho từng loại cấu kiện
+  - group: LỚP 2 – KIỂM TRA BỘ MÔN (Trưởng nhóm BIM bộ môn)
+    ref: B3
+    item: Đủ tham số bắt buộc và giá trị hợp lệ theo ma trận LOD/LOI
+  - group: LỚP 2 – KIỂM TRA BỘ MÔN (Trưởng nhóm BIM bộ môn)
+    ref: B4
+    item: Mô hình thống nhất với bản vẽ, thuyết minh, bảng tính của bộ môn
+  - group: LỚP 2 – KIỂM TRA BỘ MÔN (Trưởng nhóm BIM bộ môn)
+    ref: B5
+    item: Giao diện với hạng mục hiện hữu đúng theo hồ sơ hoàn công và khảo sát
+  - group: LỚP 2 – KIỂM TRA BỘ MÔN (Trưởng nhóm BIM bộ môn)
+    ref: B6
+    item: Khối lượng trích xuất từ mô hình đã được đối chiếu
+  - group: LỚP 3 – KIỂM TRA TỔNG HỢP (Điều phối BIM, Quản lý BIM)
+    ref: C1
+    item: Các mô hình thành phần trùng khớp vị trí, cao độ khi tích hợp
+  - group: LỚP 3 – KIỂM TRA TỔNG HỢP (Điều phối BIM, Quản lý BIM)
+    ref: C2
+    item: Đã chạy đủ các cặp trong ma trận xung đột; không còn xung đột mức Nghiêm trọng, Cao chưa xử lý
+  - group: LỚP 3 – KIỂM TRA TỔNG HỢP (Điều phối BIM, Quản lý BIM)
+    ref: C3
+    item: Tệp IFC xuất ra đủ đối tượng, đúng lớp IFC, đủ thuộc tính; dung lượng trong giới hạn của CDE
+  - group: LỚP 3 – KIỂM TRA TỔNG HỢP (Điều phối BIM, Quản lý BIM)
+    ref: C4
+    item: Các vấn đề trên CDE của đợt đã đóng hoặc có phương án được chấp thuận
+  - group: LỚP 3 – KIỂM TRA TỔNG HỢP (Điều phối BIM, Quản lý BIM)
+    ref: C5
+    item: Bộ sản phẩm của đợt đủ theo MIDP
+naming:
+  syntax: <Mã dự án>-<Đơn vị khởi tạo>-<Kiểu tệp tin>-<Bộ môn>-<Số thứ tự>
+  example: 'Quy tắc này theo mục 3.3.3 Chương V E-HSMT; mã dự án là DH3MR.KT. Ví dụ: DH3MR.KT-PECC2-DR-STR-0001
+    là bản vẽ kết cấu số 0001 do PECC2 lập. Tệp mô hình không bắt buộc có số thứ tự. Để phân biệt nhiều mô hình
+    cùng bộ môn, Nhà thầu bổ sung hậu tố mô tả sau trường bộ môn, phân cách bằng dấu gạch dưới, ví dụ DH3MR.KT-PECC2-M3-STR_GIAN.rvt
+    «cần Chủ đầu tư chấp thuận».'
+  regex: ^DH3MR\.KT-[A-Z0-9]{2,6}-[A-ZĐ0-9]{2}-(ARC|STR|AST|MEC|ELC|MEP|ALL)(_[A-Z0-9]+)?(-\d{4})?$
+  fields:
+  - name: Mã dự án
+    length: '8'
+    required: Có
+    example: DH3MR.KT
+    note: Cố định theo E-HSMT
+  - name: Đơn vị khởi tạo
+    length: 2–6
+    required: Có
+    example: PECC2
+    note: Theo bảng mã Đơn vị khởi tạo
+  - name: Kiểu tệp tin
+    length: '2'
+    required: Có
+    example: M3
+    note: Theo bảng mã Kiểu tệp tin của E-HSMT
+  - name: Bộ môn
+    length: '3'
+    required: Có
+    example: STR
+    note: Theo bảng mã Bộ môn của E-HSMT; có thể kèm hậu tố _<MÔ TẢ> cho mô hình
+  - name: Số thứ tự
+    length: '4'
+    required: Không bắt buộc với mô hình
+    example: '0001'
+    note: Bốn chữ số, không dùng lại số đã cấp
+  codes:
+  - table: Đơn vị khởi tạo
+    code: PECC2
+    meaning: Công ty Cổ phần Tư vấn Xây dựng Điện 2
+    note: ''
+  - table: Đơn vị khởi tạo
+    code: PECC3
+    meaning: Công ty Cổ phần Tư vấn Xây dựng Điện 3
+    note: Dữ liệu đầu vào giai đoạn BCNCKT/TKCS
+  - table: Đơn vị khởi tạo
+    code: «…»
+    meaning: Các thành viên liên danh, nhà thầu phụ, Tư vấn giám sát
+    note: Bổ sung khi lập danh sách các bên
+  - table: Kiểu tệp tin
+    code: M3
+    meaning: Mô hình 3D
+    note: rvt, ifc, nwc
+  - table: Kiểu tệp tin
+    code: M2
+    meaning: Mô hình 2D
+    note: dwg
+  - table: Kiểu tệp tin
+    code: CM
+    meaning: Mô hình phối hợp (tổng hợp)
+    note: nwf, nwd
+  - table: Kiểu tệp tin
+    code: CR
+    meaning: Báo cáo xung đột
+    note: pdf
+  - table: Kiểu tệp tin
+    code: DR
+    meaning: Bản vẽ
+    note: dwg, pdf
+  - table: Kiểu tệp tin
+    code: RP
+    meaning: Báo cáo
+    note: docx, pdf
+  - table: Kiểu tệp tin
+    code: SH
+    meaning: Bảng biểu, danh mục
+    note: xlsx, pdf
+  - table: Kiểu tệp tin
+    code: VS
+    meaning: Mô phỏng, trực quan hóa
+    note: nwd, mp4
+  - table: Kiểu tệp tin
+    code: RI
+    meaning: Yêu cầu cung cấp thông tin
+    note: ''
+  - table: Kiểu tệp tin
+    code: PR
+    meaning: Kế hoạch, quy trình (BEP và phụ lục)
+    note: «Mã đề xuất bổ sung, chưa có trong danh mục của E-HSMT; cần Chủ đầu tư chấp thuận»
+  - table: Kiểu tệp tin
+    code: khác
+    meaning: AF, BH, BQ, CA, CP, DB, FN, HĐ, HS, IE, MI, MR, MS, PP, RD, SA, SP, SU
+    note: Theo danh mục tại mục 3.3.3 Chương V E-HSMT
+  - table: Bộ môn
+    code: ARC
+    meaning: Kiến trúc
+    note: ''
+  - table: Bộ môn
+    code: STR
+    meaning: Kết cấu
+    note: ''
+  - table: Bộ môn
+    code: AST
+    meaning: Xây dựng
+    note: ''
+  - table: Bộ môn
+    code: MEC
+    meaning: Cơ
+    note: Gồm hệ thống chữa cháy
+  - table: Bộ môn
+    code: ELC
+    meaning: Điện
+    note: ''
+  - table: Bộ môn
+    code: MEP
+    meaning: Cơ điện
+    note: ''
+  - table: Bộ môn
+    code: ALL
+    meaning: Tất cả bộ môn
+    note: ''
+  examples:
+  - name: DH3MR.KT-PECC2-PR-ALL-0001
+    meaning: Kế hoạch thực hiện BIM
+  - name: DH3MR.KT-PECC2-M3-STR_GIAN.rvt
+    meaning: Mô hình kết cấu giàn không gian mái vòm
+  - name: DH3MR.KT-PECC2-DR-STR-0001
+    meaning: Bản vẽ kết cấu số 0001
+  - name: DH3MR.KT-PECC2-CM-ALL.nwd
+    meaning: Mô hình phối hợp tất cả bộ môn
+  - name: DH3MR.KT-PECC2-CR-ALL-0001
+    meaning: Báo cáo xung đột số 0001
+  - name: DH3MR.KT-PECC3-BEP-ZZ-ZZ-0001.rvt
+    meaning: Mô hình BCNCKT/TKCS do Chủ đầu tư cung cấp (giữ nguyên tên gốc)
+doc:
+  revision: A
+  issue_text: Bản A - Tháng «…»
+  month: Tháng «…»
+  prepared_by: ''
+  checked_by: ''
+  approved_by: ''
+  sign_date: ''
+  documents:
+  - doc: bep
+    code: DH3MR.KT-PECC2-PR-ALL-0001
+    enabled: true
+  - doc: pl_raci
+    code: DH3MR.KT-PECC2-PR-ALL-0002
+    enabled: true
+  - doc: pl_naming
+    code: DH3MR.KT-PECC2-PR-ALL-0003
+    enabled: true
+  - doc: pl_midp
+    code: DH3MR.KT-PECC2-SH-ALL-0004
+    enabled: true
+  - doc: pl_cde
+    code: DH3MR.KT-PECC2-PR-ALL-0005
+    enabled: true
+  - doc: pl_lod
+    code: DH3MR.KT-PECC2-SH-ALL-0006
+    enabled: true
+  - doc: pl_clash
+    code: DH3MR.KT-PECC2-PR-ALL-0007
+    enabled: true
+  - doc: pl_qc
+    code: DH3MR.KT-PECC2-SH-ALL-0008
+    enabled: true
+  revisions:
+  - rev: A
+    date: ''
+    prepared: PECC2
+    checked: PECC2
+    approved: ''
+    description: Phát hành lần đầu trình Chủ đầu tư chấp thuận
+sources:
+  folders: []
+overrides:
+  bep:
+    nghiem-thu:
+      enabled: true
+      body: |-
+        - Quản lý BIM tổng hợp hồ sơ nghiệm thu nội bộ của từng đợt gồm: mô hình thành phần, mô hình tổng hợp, kết quả kiểm tra ba lớp, báo cáo xung đột và báo cáo tình trạng vấn đề trích xuất từ CDE;
+        - Sản phẩm sau khi được Giám đốc dự án của {{ A }} chấp thuận được Quản lý BIM chuyển sang trạng thái Shared để Tư vấn giám sát kiểm tra độc lập;
+        - Sau khi các ý kiến của Tư vấn giám sát đã được xử lý, sản phẩm được phát hành ở trạng thái Published và trình nộp qua hệ thống quản lý hồ sơ trực tuyến của Chủ đầu tư;
+        - Chủ đầu tư nghiệm thu sản phẩm BIM cùng hồ sơ TKBVTC mỗi đợt và hồ sơ hoàn công theo BEP đã được chấp thuận; kết quả được ghi nhận bằng biên bản và lưu trên CDE.
+    bao-mat:
+      enabled: true
+      body: |-
+        Toàn bộ quy trình quản lý, khai thác, chia sẻ, lưu trữ dữ liệu BIM tuân thủ quy định của pháp luật về an ninh mạng và an toàn, bảo mật thông tin, cụ thể là Luật An ninh mạng số 116/2025/QH15 và khoản 6 Điều 8 Nghị định số 217/2026/NĐ-CP. Trên {{ CDE }}, {{ A }} tuân thủ quy định vận hành của đơn vị cung cấp; trong phạm vi của mình, {{ A }} áp dụng các biện pháp sau:
+
+        - Mỗi thành viên dùng tài khoản định danh cá nhân; không sử dụng tài khoản dùng chung;
+        - Quyền truy cập được đề nghị cấp theo vai trò trong ma trận phân quyền tại {{ pl('pl_cde') }} và thu hồi ngay khi nhân sự rời dự án;
+        - Không chia sẻ dữ liệu dự án ra ngoài các bên tham gia khi chưa được Chủ đầu tư chấp thuận;
+        - Dữ liệu trên môi trường làm việc tạm thời của {{ A }} (nếu có) được lưu trữ tại hạ tầng đặt trong lãnh thổ Việt Nam, có nhật ký hoạt động và sao lưu định kỳ.
+citations: {}

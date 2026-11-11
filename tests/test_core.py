@@ -95,3 +95,16 @@ def test_render_docx(p, tmp_path):
         assert len(caps) == len([b for b in doc.blocks if isinstance(b, Table) and b.caption])
         heads = [x.text for x in d.paragraphs if x.style.name == "Heading 1"]
         assert heads == [f"{n}. {t}" for n, t in enumerate(headings(doc), 1)]
+
+
+def test_dh3mr_bvtc_project():
+    p = store.load_path(ROOT / "projects" / "dh3mr_bvtc")
+    assert [d.label for d in doc_infos(p)] == ["", "PL-01", "PL-02", "PL-03", "PL-04", "PL-05", "PL-06", "PL-07"]
+    bep = compose(p, "bep")
+    h2 = headings(bep, 2)
+    assert "Phát hiện và xử lý xung đột" in h2
+    assert "Giới hạn phạm vi áp dụng BIM ở giai đoạn thiết kế bản vẽ thi công" in h2
+    text = " ".join(t for _, t in __import__("bimpro.compose", fromlist=["block_texts"]).block_texts(bep))
+    assert "LOD 350" in text and "Tư vấn giám sát" in text and "Nhà thầu" in text
+    assert "PL-05" in text and "PL-06" in text and "PL-07" in text
+    assert not [i for i in validate(p) if i.level in ("error", "warn")]

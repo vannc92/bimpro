@@ -256,6 +256,12 @@ def _table(d, b: Table, width: int, size: int):
     weights = b.widths if len(b.widths) == ncol else _auto_widths(b, ncol)
     total = sum(weights)
     col_w = [int(width * w / total) for w in weights]
+    floor = int(Cm(1.0))  # cột hẹp nhất vẫn đủ chỗ cho số thứ tự hai chữ số
+    for k, w in enumerate(col_w):
+        if w < floor:
+            big = col_w.index(max(col_w))
+            col_w[big] -= floor - w
+            col_w[k] = floor
     hdr = t.rows[0]
     _repeat_header(hdr)
     for k, cell in enumerate(hdr.cells):

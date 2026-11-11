@@ -227,6 +227,17 @@ Cấu trúc thư mục, ma trận phân quyền theo vai trò và quy định v�
 
 Kế hoạch chuyển giao chi tiết theo từng nhóm thực hiện (TIDP) và kế hoạch tổng thể (MIDP) được trình bày tại {{ pl('pl_midp') }} đính kèm.
 
+### bao-cao-bim | Cấu trúc Báo cáo mô hình thông tin công trình BIM {when: p.delivery.report_outline}
+Báo cáo mô hình thông tin công trình BIM của từng đợt và báo cáo khi kết thúc giai đoạn được lập theo cấu trúc sau:
+
+{% for x in p.delivery.report_outline %}
+{% if x[:1].isdigit() and '.' in x.split(' ')[0] and x.split(' ')[0].strip('.').count('.') >= 1 %}
+  + {{ x }}
+{% else %}
+- {{ x }}
+{% endif %}
+{% endfor %}
+
 ## lod | Mức độ phát triển thông tin (LOD)
 Mức độ phát triển thông tin (Level of Development – LOD) bao gồm thông tin hình học và phi hình học của các thành phần, cấu kiện, phù hợp với yêu cầu của dự án và các quy định cụ thể liên quan đến sản phẩm mô hình. Trong một mô hình BIM ở mỗi giai đoạn thiết kế nhất định, các thành phần trong mô hình có thể có mức độ phát triển khác nhau.
 
@@ -240,6 +251,10 @@ Mức độ phát triển thông tin của các đối tượng mô hình theo t
 
 [Bảng#lod|7,38,10,45] Mức độ phát triển thông tin của mô hình
 {{ tbl(['TT', 'Tên cấu kiện', 'LOD', 'Thông tin phi hình học cần đính kèm'], grows(p.models.lod, 'group', '#', 'element', 'lod', 'info')) }}
+
+{% if 'pl_lod' in docs|map(attribute='doc') %}
+Định nghĩa các mức LOD, bộ tham số thông tin bắt buộc và quy định quản lý tham số được trình bày tại {{ pl('pl_lod') }} đính kèm.
+{% endif %}
 
 # phoi-hop | QUY TRÌNH PHỐI HỢP
 ## quy-trinh | Quy trình phối hợp và tạo lập mô hình BIM
@@ -258,7 +273,7 @@ Mức độ phát triển thông tin của các đối tượng mô hình theo t
 | 5 | Điều phối BIM | Kiểm tra phối hợp trực quan trên mô hình tổng hợp; rà soát tổng mặt bằng, khoảng cách bố trí và giao diện giữa các hạng mục. Các vấn đề phát hiện được ghi nhận bằng chức năng Issues/Markup trên CDE, phân công xử lý và theo dõi đến khi đóng; mô hình được cập nhật theo vòng lặp về Bước 2. |
 {% endif %}
 {% if f.supervisor %}
-| 6 | Tư vấn giám sát, quản lý BIM | Kiểm tra độc lập mô hình tổng hợp và báo cáo xung đột; các ý kiến được ghi nhận trên CDE và xử lý theo vòng lặp về Bước 2. |
+| 6 | Quản lý BIM; Tư vấn giám sát, quản lý BIM | Quản lý BIM phê duyệt chuyển mô hình sang trạng thái Shared; Tư vấn giám sát kiểm tra độc lập mô hình tổng hợp, lập báo cáo xung đột và sai sót thiết kế (nếu có); các ý kiến được ghi nhận trên CDE và xử lý theo vòng lặp về Bước 2. |
 | 7 | Quản lý BIM, Chuyên gia quản lý dữ liệu | Bàn giao và phát hành mô hình BIM cho Chủ đầu tư theo đúng trạng thái CDE và mốc chuyển giao đã thống nhất. |
 {% else %}
 | 6 | Quản lý BIM, Chuyên gia quản lý dữ liệu | Bàn giao và phát hành mô hình BIM cho Chủ đầu tư theo đúng trạng thái CDE và mốc chuyển giao đã thống nhất. |
@@ -317,6 +332,9 @@ Các bên cần tuân thủ các quy định sau:
 - Việc đặt tên tập tin và thư mục tuân thủ quy ước đặt tên nêu tại @sec[dat-ten] và {{ pl('pl_naming') }};
 - Mọi mô hình được tải lên ở định dạng đã thống nhất; mô hình chỉ được chuyển sang trạng thái Shared sau khi đã qua kiểm tra nội bộ bộ môn;
 - {{ A }} bàn giao mô hình tổng hợp giai đoạn {{ stage.short }} ở định dạng *.nwd và *.ifc cho Chủ đầu tư;
+{% for x in p.coordination.exchange_extra %}
+- {{ x }};
+{% endfor %}
 - Không trao đổi mô hình và tài liệu dự án qua các kênh ngoài CDE (thư điện tử cá nhân, dịch vụ lưu trữ đám mây công cộng, thiết bị lưu trữ rời) trừ trường hợp được Chủ đầu tư chấp thuận bằng văn bản.
 
 ## dat-ten | Quy ước đặt tên tập tin

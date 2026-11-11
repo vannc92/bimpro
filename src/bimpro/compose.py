@@ -214,7 +214,7 @@ def _cell(v) -> str:
 def _get(it, a: str) -> str:
     """Giá trị ô; ô trống hiện «…» trừ khi tên cột có hậu tố '?' (được phép trống)."""
     optional = a.endswith("?")
-    v = _cell(getattr(it, a.rstrip("?")))
+    v = _cell(getattr(it, a.rstrip("?"), ""))
     return v if v or optional else PLACEHOLDER
 
 

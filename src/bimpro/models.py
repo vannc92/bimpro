@@ -218,6 +218,14 @@ class QcItem(M):
     item: str = F("Nội dung kiểm tra")
 
 
+class Param(M):
+    name: str = F("Tên tham số")
+    kind: str = F("Kiểu dữ liệu")
+    scope: str = F("Instance/Type")
+    applies: str = F("Áp dụng cho")
+    description: str = F("Mô tả")
+
+
 class DocRef(M):
     doc: str = F("Tài liệu (mã trong thư viện)")
     code: str = F("Mã hiệu tài liệu")
@@ -291,6 +299,7 @@ class Models(Group):
     areas: list[ModelArea] = L("Phân chia mô hình theo khu vực/hệ thống và bộ môn")
     files: list[ModelFile] = L("Danh mục mô hình và mã hiệu")
     lod: list[LodRow] = L("Mức độ phát triển thông tin theo cấu kiện")
+    params: list[Param] = L("Bộ tham số thông tin chung (LOI)")
 
 
 class Cde(Group):
@@ -314,6 +323,7 @@ class Delivery(Group):
     rounds: list[Round] = L("Các đợt chuyển giao (MIDP)")
     midp: list[MidpRow] = L("MIDP – kế hoạch chuyển giao thông tin tổng thể")
     tidp: list[TidpRow] = L("TIDP – kế hoạch chuyển giao thông tin nhiệm vụ")
+    report_outline: list[str] = L("Cấu trúc Báo cáo BIM (mỗi dòng một mục; để trống nếu không trình bày)")
 
 
 class Coordination(Group):
@@ -324,6 +334,7 @@ class Coordination(Group):
     units: str = F("Đơn vị đo lường", long=True)
     coord_system: str = F("Hệ tọa độ, cao độ", long=True)
     coord_params: str = F("Thông số hệ tọa độ và điểm gốc dự án", long=True)
+    exchange_extra: list[str] = L("Quy định trao đổi dữ liệu bổ sung của dự án (mỗi dòng một ý)")
     qc: list[QcItem] = L("Danh mục kiểm tra chất lượng mô hình")
 
 
