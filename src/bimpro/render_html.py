@@ -19,6 +19,7 @@ def _inline(text: str) -> str:
 def render(doc: Doc) -> str:
     out = [f'<h1 class="doc-title">{escape(doc.full_title)}</h1>']
     sid = None
+    minor = 0  # tiêu đề nhỏ tự đánh số 1., 2., ... trong từng mục (Word đánh số bằng style Heading 4)
     for b in doc.blocks:
         if b.sid != sid:
             if sid is not None:
@@ -26,10 +27,15 @@ def render(doc: Doc) -> str:
             out.append(f'<div class="sec" data-sid="{b.sid}" id="s-{b.sid}">')
             sid = b.sid
         if isinstance(b, Heading):
+            minor = 0
             out.append(f"<h{b.level + 1}>{b.number}. {_inline(b.text)}</h{b.level + 1}>")
         elif isinstance(b, Para):
             cls = {"syntax": "syntax", "minor": "minor"}.get(b.style, "")
-            out.append(f'<p class="{cls}">{_inline(b.text)}</p>')
+            text = _inline(b.text)
+            if b.style == "minor":
+                minor += 1
+                text = f"{minor}. {text}"
+            out.append(f'<p class="{cls}">{text}</p>')
         elif isinstance(b, Bullet):
             out.append(f'<p class="b{b.level}">{"−" if b.level == 1 else "+"} {_inline(b.text)}</p>')
         elif isinstance(b, Table):

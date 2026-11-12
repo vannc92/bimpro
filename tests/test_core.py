@@ -87,14 +87,27 @@ def test_validate_catches_errors(p):
 
 
 def test_render_docx(p, tmp_path):
+    """Định dạng lấy từ khuôn base.docx: style tự đánh số, bìa tách section, đầu/cuối trang."""
     for info in doc_infos(p):
         doc = compose(p, info.doc)
         out = render(p, doc, tmp_path / f"{info.doc}.docx", TEMPLATE)
         d = Document(str(out))
-        caps = [x.text for x in d.paragraphs if re.match(r"Bảng \d+\. ", x.text)]
-        assert len(caps) == len([b for b in doc.blocks if isinstance(b, Table) and b.caption])
-        heads = [x.text for x in d.paragraphs if x.style.name == "Heading 1"]
-        assert heads == [f"{n}. {t}" for n, t in enumerate(headings(doc), 1)]
+        by_style = {}
+        for x in d.paragraphs:
+            by_style.setdefault(x.style.name, []).append(x.text)
+        # chú thích bảng dùng style BANG (Word tự thêm "Bảng n."), nên chữ không chứa số
+        assert len(by_style.get("BANG", [])) == len([b for b in doc.blocks if isinstance(b, Table) and b.caption])
+        # tiêu đề không mang số gõ tay; số do danh sách nhiều cấp của style Heading
+        assert by_style.get("Heading 1", []) == headings(doc)
+        assert len(d.tables[0].columns) == 4  # bảng ký ở bìa
+        # section 1 = bìa, không đầu/cuối trang; section 2 có đầu/cuối trang theo mẫu
+        assert len(d.sections) == 2
+        assert d.sections[0].header.is_linked_to_previous  # bìa: không định nghĩa đầu trang
+        head = " ".join(x.text for x in d.sections[1].header.paragraphs)
+        assert p.general.owner_short in head and "Dự án" in head
+        foot = " ".join(x.text for x in d.sections[1].footer.paragraphs)
+        assert doc.info.short in foot and "Trang" in foot
+        assert (d.sections[1].orientation == 1) == (doc.orientation == "landscape")
 
 
 def test_dh3mr_bvtc_project():

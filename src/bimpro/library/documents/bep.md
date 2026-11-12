@@ -84,7 +84,7 @@ Các nội dung áp dụng BIM trong giai đoạn {{ stage.short }} của dự �
 
 ### noi-dung-mo-ta | Mô tả nội dung áp dụng BIM cho dự án
 {% for u in p.bim.uses %}
-### {{ loop.index }}. {{ u.name }}
+### {{ u.name }}
 
 {{ u.description }}
 
