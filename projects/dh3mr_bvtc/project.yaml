@@ -3,6 +3,7 @@ stage: BVTC
 is_template: false
 general:
   name: Mở rộng mái che kho than Nhà máy nhiệt điện Duyên Hải 3 mở rộng
+  name_short: Mở rộng mái che kho than NMNĐ DH3MR
   code: DH3MR.KT
   owner_short: EVNPMB3
   author_short: PECC2
@@ -10,6 +11,7 @@ general:
   author_role: Nhà thầu
   package: 'Gói thầu EPC-DH3MR: Thiết kế, cung cấp vật tư và thi công xây dựng công trình'
   report_title: 'THIẾT KẾ BẢN VẼ THI CÔNG – TẬP 6: THIẾT KẾ BIM'
+  header_title: THIẾT KẾ BẢN VẼ THI CÔNG
   info:
   - label: Tên dự án
     value: Mở rộng mái che kho than Nhà máy nhiệt điện Duyên Hải 3 mở rộng

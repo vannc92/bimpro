@@ -246,13 +246,15 @@ class Group(M):
 
 class General(Group):
     name: str = F("Tên dự án")
+    name_short: str = F("Tên dự án rút gọn (in ở đầu trang; để trống thì dùng tên dự án)")
     code: str = F("Mã dự án")
     owner_short: str = F("Chủ đầu tư – tên viết tắt (in ở đầu trang)")
     author_short: str = F("Đơn vị lập BEP – tên viết tắt")
     author_name: str = F("Đơn vị lập BEP – tên đầy đủ")
     author_role: str = F("Cách xưng của đơn vị lập BEP trong văn bản", "Tư vấn")
     package: str = F("Tên gói thầu (nếu có)")
-    report_title: str = F("Tên hồ sơ in ở đầu trang (ví dụ: BÁO CÁO NGHIÊN CỨU KHẢ THI)")
+    report_title: str = F("Tên hồ sơ in trên bìa (ví dụ: BÁO CÁO NGHIÊN CỨU KHẢ THI)")
+    header_title: str = F("Tên hồ sơ in ở đầu trang (rút gọn; để trống thì dùng tên hồ sơ trên bìa)")
     info: list[KV] = L("Bảng thông tin chung của dự án")
     parties: list[Party] = L("Các bên tham gia")
 
