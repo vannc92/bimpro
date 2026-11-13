@@ -310,6 +310,7 @@ def _figure(d, b: Figure, base: Path, width: int):
     if path and path.exists():
         p = d.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p.paragraph_format.keep_with_next = True  # giữ chú thích cùng trang với hình
         p.add_run().add_picture(str(path), width=int(width * 0.95))
     else:
         p = d.add_paragraph()

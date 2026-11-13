@@ -361,6 +361,15 @@ class DocControl(Group):
     revisions: list[Revision] = L("Bảng kiểm soát phiên bản")
 
 
+class FigureFile(M):
+    ref: str = F("Mã hình (so-do-to-chuc, quy-trinh, tien-do, phan-chia, cde, xung-dot, cong-trinh)")
+    file: str = F("Tệp ảnh PNG/JPG (đường dẫn trong thư mục dự án)")
+
+
+class Illustrations(Group):
+    items: list[FigureFile] = L("Hình minh họa chèn vào tài liệu (hình không khai báo thì bỏ qua)")
+
+
 class Sources(Group):
     folders: list[str] = L("Thư mục hồ sơ đầu vào của dự án (mỗi dòng một đường dẫn)")
 
@@ -377,6 +386,7 @@ GROUPS: dict[str, tuple[str, type[Group]]] = {
     "coordination": ("Phối hợp, phần mềm, tọa độ", Coordination),
     "naming": ("Quy ước đặt tên", Naming),
     "doc": ("Kiểm soát tài liệu", DocControl),
+    "figures": ("Hình minh họa", Illustrations),
     "sources": ("Thư mục hồ sơ đầu vào", Sources),
 }
 
@@ -397,6 +407,7 @@ class Project(M):
     coordination: Coordination = Field(default_factory=Coordination)
     naming: Naming = Field(default_factory=Naming)
     doc: DocControl = Field(default_factory=DocControl)
+    figures: Illustrations = Field(default_factory=Illustrations)
     sources: Sources = Field(default_factory=Sources)
     # ghi đè nội dung theo mục: {mã tài liệu: {mã mục: Override}}
     overrides: dict[str, dict[str, Override]] = Field(default_factory=dict)

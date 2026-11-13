@@ -14,7 +14,7 @@ Mẫu tài liệu là tệp ``library/documents/<mã>.md``:
 Cú pháp nội dung:
     - ý cấp 1            + ý cấp 2 (thụt 2 dấu cách)
     [Bảng#ma|10,30,60] Tên bảng      (dòng kế tiếp là bảng ``|`` hoặc ``{{ tbl(...) }}``)
-    [Hình#ma] Tên hình
+    [Hình#ma] Tên hình               [Hình#ma?] chỉ chèn khi dự án khai báo ảnh (nhóm Hình minh họa)
     > cú pháp/ví dụ canh giữa        ### tiêu đề nhỏ không đánh số
     @[ma] -> "Bảng 3"/"Hình 1"       @sec[ma-muc] -> "mục 5.2"
 """
@@ -291,7 +291,7 @@ def _env() -> Environment:
 
 # ------------------------------------------------------------------ phân tích nội dung
 
-_CAP = re.compile(r"^\[(Bảng|Hình)(?:#([\w\-]+))?(?:\|([\d,\. ]+))?\]\s*(.*)$")
+_CAP = re.compile(r"^\[(Bảng|Hình)(?:#([\w\-]+)(\?)?)?(?:\|([\d,\. ]+))?\]\s*(.*)$")
 _TMARK = re.compile(r"^\x02T(\d+)\x02$")
 
 
@@ -328,8 +328,10 @@ def parse_body(text: str, sid: str, tables: _Tables, figures: dict[str, str]) ->
         m = _CAP.match(line)
         if m:
             flush()
-            kind, ref, widths, caption = m.groups()
+            kind, ref, optional, widths, caption = m.groups()
             if kind == "Hình":
+                if optional and not figures.get(ref or ""):
+                    continue  # ô hình tùy chọn: dự án chưa khai báo ảnh thì bỏ qua
                 blocks.append(Figure(sid, caption, ref or "", image=figures.get(ref or "", "")))
             else:
                 pending = Table(sid, caption, ref or "")
@@ -410,6 +412,7 @@ def compose(project: Project, doc: str) -> Doc:
     ctx["doc"] = info
     overrides = project.overrides.get(doc, {})
     figures = {"so-do-to-chuc": project.org.chart_image, "quy-trinh": project.coordination.process_image}
+    figures.update({x.ref: x.file for x in project.figures.items if x.ref and x.file})
 
     issues: list[Issue] = []
     blocks: list = []
