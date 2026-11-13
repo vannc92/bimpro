@@ -242,7 +242,7 @@ bim:
   - Hệ thống chữa cháy bổ sung
   - Mặt bằng tổ chức thi công, bãi tập kết, vị trí cẩu, phạm vi che chắn bảo vệ băng tải (phục vụ 4D)
 org:
-  chart_image: ''
+  chart_image: figures/so-do-to-chuc.png
   people:
   - name: ''
     org: PECC2
@@ -1098,7 +1098,7 @@ delivery:
   - 3.1 Kết luận về quá trình ứng dụng BIM tại dự án
   - 3.2 Kiến nghị
 coordination:
-  process_image: ''
+  process_image: figures/quy-trinh.png
   checks:
   - name: Kiểm tra trực quan mô hình bộ môn
     description: Quan sát mô hình, đối chiếu với bản vẽ và số liệu thiết kế của bộ môn
@@ -1435,6 +1435,18 @@ doc:
     checked: PECC2
     approved: ''
     description: Phát hành lần đầu trình Chủ đầu tư chấp thuận
+figures:
+  items:
+  - ref: tien-do
+    file: figures/tien-do.png
+  - ref: phan-chia
+    file: figures/phan-chia.png
+  - ref: cde
+    file: figures/cde.png
+  - ref: cong-trinh
+    file: figures/cong-trinh.png
+  - ref: xung-dot
+    file: figures/xung-dot.png
 sources:
   folders: []
 overrides:

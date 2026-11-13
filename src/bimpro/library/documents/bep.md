@@ -53,6 +53,8 @@ Các cơ sở pháp lý dưới đây được sử dụng làm căn cứ trong 
 [Bảng#tien-do|8,62,30] Các mốc tiến độ chính của dự án
 {{ tbl(['TT', 'Nội dung công việc', 'Thời gian dự kiến'], rows(p.schedule.milestones, '#', 'task', 'time')) }}
 
+[Hình#tien-do?] Mốc tiến độ và sản phẩm BIM
+
 ## tieu-chuan | Tiêu chuẩn áp dụng
 {{ A }} tham khảo và áp dụng các tiêu chuẩn, hướng dẫn cho công tác triển khai BIM của dự án như bảng bên dưới:
 
@@ -195,12 +197,16 @@ Việc phân chia mô hình BIM của dự án thành các mô hình thành ph�
 [Bảng#ma-hieu|7,22,24,13,34] Danh mục mô hình và mã hiệu
 {{ tbl(['TT', 'Khu vực/hệ thống', 'Mô hình thành phần', 'Bộ môn', 'Mã hiệu mô hình'], rows(p.models.files, '#', 'area', 'content', 'discipline', 'code')) }}
 
+[Hình#phan-chia?] Phân chia mô hình và mô hình tổng hợp
+
 ## cde | Môi trường dữ liệu chung – {{ CDE }}
 Môi trường dữ liệu chung (CDE) là nguồn thông tin duy nhất của dự án, dùng để thu thập, quản lý và phổ biến tất cả các tài liệu được tạo ra bởi các bên tham gia.
 
 {{ p.cde.intro }}
 
 {{ CDE }} quản lý tài liệu theo bốn vùng trạng thái tuân thủ ISO 19650, gồm: Work in Progress (đang xử lý – chỉ nhóm tác giả truy cập), Shared (chia sẻ để các bên xem xét, phối hợp), Published (đã được phê duyệt chính thức) và Archived (lưu trữ lịch sử). Trạng thái được gán ở cấp thư mục và tệp kế thừa trạng thái của thư mục chứa nó; do đó cấu trúc thư mục dự án được thiết lập ngay từ đầu giai đoạn và chỉ thay đổi khi có sự thống nhất giữa các bên.
+
+[Hình#cde?] Các vùng trạng thái và luồng thông tin trên CDE
 
 [Bảng#phan-he|30,70] Các phân hệ {{ CDE }} áp dụng cho dự án
 {{ tbl(['Phân hệ', 'Mục đích sử dụng trong dự án'], rows(p.cde.modules, 'name', 'purpose')) }}
@@ -305,7 +311,11 @@ Các cặp đối tượng kiểm tra, dung sai và trách nhiệm như sau:
 [Bảng#xung-dot|30,16,14,22,18] Ma trận kiểm tra xung đột
 {{ tbl(['Cặp đối tượng kiểm tra', 'Loại xung đột', 'Dung sai', 'Trách nhiệm', 'Tần suất'], rows(p.coordination.clashes, 'pair', 'kind', 'tolerance', 'responsible', 'frequency')) }}
 
+[Hình#cong-trinh?] Sơ đồ công trình và vị trí kiểm tra xung đột
+
 Mỗi xung đột được ghi nhận thành một vấn đề (Issue) trên CDE kèm vị trí, hình ảnh, bộ môn chịu trách nhiệm và thời hạn xử lý. Bộ môn chịu trách nhiệm cập nhật mô hình; Điều phối BIM chạy lại kiểm tra để xác nhận và đóng vấn đề. Hồ sơ {{ stage.short }} của từng đợt chỉ được phát hành khi các xung đột thuộc phạm vi đợt đó đã được giải quyết hoặc đã có phương án xử lý được Chủ đầu tư chấp thuận.
+
+[Hình#xung-dot?] Vòng phát hiện và xử lý xung đột
 
 {% if 'pl_clash' in docs|map(attribute='doc') %}
 Quy trình chi tiết, phân loại mức độ và mẫu báo cáo xung đột được trình bày tại {{ pl('pl_clash') }} đính kèm.
