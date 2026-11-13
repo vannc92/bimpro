@@ -19,7 +19,7 @@ from xml.sax.saxutils import escape
 from docx import Document
 from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK, WD_COLOR_INDEX
-from docx.enum.section import WD_ORIENT
+from docx.enum.section import WD_ORIENT, WD_SECTION
 from docx.oxml import OxmlElement, parse_xml
 from docx.oxml.ns import nsdecls, qn
 from docx.shared import Cm, Pt, Twips
@@ -38,6 +38,8 @@ _COVER_SECT = (
     '<w:cols w:space="720"/><w:docGrid w:linePitch="354"/></w:sectPr>'
 )
 _LANDSCAPE = dict(w=16838, h=11906, top=1411, bottom=1411, left=1418, right=1134)
+# phụ lục: bìa + mục lục là section khổ dọc riêng (theo PL01 người dùng chỉnh), nội dung theo hướng của tài liệu
+_APPENDIX_PORTRAIT = dict(top=1134, bottom=1418, left=1411, right=1411)
 
 _BODY_STYLE = {1: "Body Text 1", 2: "Body Text 2", 3: "Body Text 3", 4: "Body Text 4"}
 _TABLE_HEADER_FILL = "D9D9D9"
@@ -208,7 +210,7 @@ def _cover(d, project: Project, doc: Doc):
     d.add_paragraph()._p.get_or_add_pPr().append(parse_xml(_COVER_SECT.format(ns=nsdecls("w"))))
 
 
-def _toc(d, doc: Doc):
+def _toc(d, doc: Doc, page_break: bool = True):
     """Trường mục lục của Word; kết quả tạm (chưa có số trang) để xem được khi chưa cập nhật."""
     _centered(d, "MỤC LỤC", bold=True)
     heads = [b for b in doc.blocks if isinstance(b, Heading) and b.level <= 3]
@@ -226,7 +228,8 @@ def _toc(d, doc: Doc):
         p.style = d.styles[f"toc {h.level}"]
         _runs(p, f"{h.number}.\t{h.text}")
     _fldchar(p, "end")
-    _page_break(d)
+    if page_break:
+        _page_break(d)
 
 
 # ------------------------------------------------------------------ bảng, hình
@@ -364,13 +367,30 @@ def render(project: Project, doc: Doc, out: Path, base: Path | None = None) -> P
     landscape = doc.orientation == "landscape"
     d = Document(str(BASE))
     _clear_body(d)
-    width_tw = _body_section(d, landscape)
-    width = width_tw * 635
-    tsize = 11 if landscape else None  # bảng khổ ngang thu chữ lại; khổ đứng dùng cỡ chữ của style
+    # phụ lục khổ ngang: bìa + mục lục ở section khổ dọc, nội dung ở section khổ ngang kế tiếp
+    split = landscape and doc.info.kind == "appendix"
+    width_tw = _body_section(d, landscape and not split)
+    if doc.info.kind == "appendix":
+        sec0 = d.sections[-1]
+        m = _APPENDIX_PORTRAIT
+        sec0.top_margin, sec0.bottom_margin = Twips(m["top"]), Twips(m["bottom"])
+        sec0.left_margin, sec0.right_margin = Twips(m["left"]), Twips(m["right"])
+        width_tw = int((sec0.page_width - sec0.left_margin - sec0.right_margin) / 635)
 
     _cover(d, project, doc)
-    _toc(d, doc)
+    _toc(d, doc, page_break=not split)
     _header_footer(d.sections[-1], project, doc, width_tw)
+    if split:
+        sec = d.add_section(WD_SECTION.NEW_PAGE)
+        pg = sec._sectPr.find(qn("w:pgNumType"))
+        if pg is not None:
+            sec._sectPr.remove(pg)  # đánh số trang nối tiếp mục lục
+        width_tw = _body_section(d, True)
+        sec.header.is_linked_to_previous = False  # đầu/cuối trang riêng, tab phải theo bề rộng khổ ngang
+        sec.footer.is_linked_to_previous = False
+        _header_footer(sec, project, doc, width_tw)
+    width = width_tw * 635
+    tsize = 11 if landscape else None  # bảng khổ ngang thu chữ lại; khổ đứng dùng cỡ chữ của style
 
     first_h1 = True
     ctx = 1  # cấp tiêu đề hiện hành, quyết định style đoạn văn

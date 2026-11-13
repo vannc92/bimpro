@@ -100,14 +100,17 @@ def test_render_docx(p, tmp_path):
         # tiêu đề không mang số gõ tay; số do danh sách nhiều cấp của style Heading
         assert by_style.get("Heading 1", []) == headings(doc)
         assert len(d.tables[0].columns) == 4  # bảng ký ở bìa
-        # section 1 = bìa, không đầu/cuối trang; section 2 có đầu/cuối trang theo mẫu
-        assert len(d.sections) == 2
+        # section 1 = bìa, không đầu/cuối trang; phụ lục khổ ngang thêm section mục lục khổ dọc (theo PL01)
+        landscape_appendix = doc.orientation == "landscape" and doc.info.kind == "appendix"
+        assert len(d.sections) == (3 if landscape_appendix else 2)
+        if landscape_appendix:
+            assert d.sections[1].orientation == 0
         assert d.sections[0].header.is_linked_to_previous  # bìa: không định nghĩa đầu trang
-        head = " ".join(x.text for x in d.sections[1].header.paragraphs)
+        head = " ".join(x.text for x in d.sections[-1].header.paragraphs)
         assert p.general.owner_short in head and "Dự án" in head
-        foot = " ".join(x.text for x in d.sections[1].footer.paragraphs)
+        foot = " ".join(x.text for x in d.sections[-1].footer.paragraphs)
         assert doc.info.short in foot and "Trang" in foot
-        assert (d.sections[1].orientation == 1) == (doc.orientation == "landscape")
+        assert (d.sections[-1].orientation == 1) == (doc.orientation == "landscape")
 
 
 def test_dh3mr_bvtc_project():
